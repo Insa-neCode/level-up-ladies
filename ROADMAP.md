@@ -40,17 +40,24 @@ Dafür einmal anwaltlich draufschauen lassen — das ist kein Copy-Paste-Thema.
 ## 2. Funktion
 
 ### 2.1 Anmeldung
-**Was:** Die vier CTA-Buttons („Jetzt anmelden", „Platz sichern") sind bewusst noch ohne Ziel — echte `<button>`-Elemente ohne Link.
-**Wo:** `src/components/Button.jsx` (bzw. `frauen/components/Button.jsx`) — sobald ein `href` übergeben wird, entsteht automatisch ein Link.
-**Optionen:**
+**Stand:** Die Buttons „Jetzt anmelden" und „Platz sichern" öffnen eine vorbereitete E-Mail
+(Betreff, Termin, Namensfeld). Funktioniert ohne Konto und ohne Datenschutzerklärung,
+zählt aber keine Plätze und verlangt von der Interessentin ein eingerichtetes Mailprogramm.
+**Wo:** `signupHref` in `src/data/content.js` und `frauen/content.js`.
 
-| Weg | Aufwand | Was ihr braucht |
-|---|---|---|
-| Formular über Formspree/Tally | klein | kostenloser Account, ich baue die Formular-ID ein |
-| Formular öffnet das Mailprogramm | sehr klein | nichts — wirkt aber weniger professionell |
-| Externes Tool (Eventbrite o.ä.) | klein | Link zur Veranstaltung |
+**Nächster Ausbau — Empfehlung Tally:** kostenlos, unbegrenzt viele Einsendungen,
+Formular schließt automatisch nach X Anmeldungen, Anbieter sitzt in Belgien mit
+Servern in Frankfurt und bietet einen AV-Vertrag. Ablauf:
 
-**Entscheidung offen.** Bei einem kostenlosen Angebot reicht die erste Variante völlig.
+- [ ] Konto bei tally.so anlegen (macht ihr selbst)
+- [ ] Formular bauen: Name, E-Mail, Kontext, Einwilligung
+- [ ] Antwortlimit auf die Platzzahl setzen
+- [ ] Formular-Link oder ID an mich — ich hänge es an die Buttons
+- [ ] Datenschutzerklärung ergänzen (siehe 1.3) — **vorher nicht live nehmen**
+
+Alternativen, falls es doch echte Terminbuchung sein soll: Cal.com (Slots mit Sitzplätzen,
+kostenlos für eine Person, mit Cal.com-Branding) oder Eventbrite (Ticketing mit Warteliste,
+für kostenlose Veranstaltungen gebührenfrei, aber US-Anbieter — mehr DSGVO-Aufwand).
 
 ### 2.2 Restliche Links
 **Was:** Im Footer stehen „Über Level Up Ladies", „Die Workshop-Season", „Anmeldung", „Kontakt" noch als reiner Text. Instagram fehlt als Kanal.
