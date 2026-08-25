@@ -5,8 +5,8 @@ import { createContext, useContext } from "react";
  * nur im Inhalt. Der Content wird deshalb nicht mehr direkt importiert, sondern
  * ueber diesen Context hereingereicht:
  *
- *   src/main.jsx         -> content.js         (Zielgruppe Bildungsbereich)
- *   src/main-frauen.jsx  -> content-frauen.js  (Zielgruppe: alle Frauen)
+ *   src/main.jsx     -> src/data/content.js  (Seite 1, Zielgruppe Bildungsbereich)
+ *   frauen/main.jsx  -> frauen/content.js     (Seite 2, Zielgruppe: alle Frauen)
  */
 const ContentContext = createContext(null);
 

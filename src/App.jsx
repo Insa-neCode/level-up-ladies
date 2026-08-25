@@ -1,7 +1,6 @@
 import Hero from "./components/Hero.jsx";
 import Ticker from "./components/Ticker.jsx";
 import About from "./components/About.jsx";
-import AboutTeam from "./components/AboutTeam.jsx";
 import WorkshopDeepDive from "./components/WorkshopDeepDive.jsx";
 import SeriesTeaser from "./components/SeriesTeaser.jsx";
 import CtaSection from "./components/CtaSection.jsx";
@@ -11,10 +10,12 @@ import { useReveal } from "./hooks/useReveal.js";
 /**
  * Gemeinsame Seiten-Shell beider Landingpages.
  *
- * aboutVariant="solo" -> "Wer bin ich?"  (Insa allein, Zielgruppe Bildung)
- * aboutVariant="team" -> "Wer sind wir?" (Insa + Mareike, Zielgruppe alle Frauen)
+ * Die Ueber-Sektion wird hereingereicht, damit diese Datei nichts ueber die
+ * einzelnen Seiten wissen muss:
+ *   Seite 1 (/)        -> About      ("Wer bin ich?",  Insa)
+ *   Seite 2 (/frauen/) -> AboutTeam  ("Wer sind wir?", Insa + Mareike)
  */
-export default function App({ aboutVariant = "solo" }) {
+export default function App({ AboutSection = About }) {
   useReveal();
 
   return (
@@ -23,7 +24,7 @@ export default function App({ aboutVariant = "solo" }) {
         <Ticker />
         <Hero />
         <Ticker tone="light" reverse />
-        {aboutVariant === "team" ? <AboutTeam /> : <About />}
+        <AboutSection />
         <Ticker />
         <WorkshopDeepDive />
         <SeriesTeaser />

@@ -8,7 +8,7 @@ import "./index.css";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ContentProvider value={content}>
-      <App aboutVariant="solo" />
+      <App />
     </ContentProvider>
   </StrictMode>
 );

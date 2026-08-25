@@ -1,9 +1,9 @@
 import { useState } from "react";
-import SectionHeading from "./SectionHeading.jsx";
-import Marker from "./Marker.jsx";
-import Tape from "./Tape.jsx";
-import Sticker from "./Sticker.jsx";
-import { useContent } from "../data/ContentContext.jsx";
+import SectionHeading from "../src/components/SectionHeading.jsx";
+import Marker from "../src/components/Marker.jsx";
+import Tape from "../src/components/Tape.jsx";
+import Sticker from "../src/components/Sticker.jsx";
+import { useContent } from "../src/data/ContentContext.jsx";
 
 /**
  * "Wer sind wir?" — die Variante fuer zwei Personen (Player 001 + Player 002).
