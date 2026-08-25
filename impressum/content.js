@@ -3,6 +3,28 @@
 // Kontaktaufnahme moeglich ist (E-Mail). Falls doch gewuenscht, hier wieder
 // eine Zeile { label: "Telefon", value: "...", href: "tel:..." } ergaenzen.
 
+// ---------------------------------------------------------------------------
+// ALTERNATIVE, sobald das Angebot ueber die Mareike Kirch Holding laeuft:
+// den Block "anbieter" unten durch diesen hier ersetzen. Fuer eine
+// eingetragene Gesellschaft sind Rechtsform, Vertretungsberechtigte,
+// Registergericht und Registernummer Pflichtangaben (§ 5 DDG).
+//
+// anbieter: [
+//   {
+//     name: "Mareike Kirch Holding [Rechtsform, z. B. GmbH]",
+//     rolle: "Level Up, Ladies!",
+//     adresse: ["[Straße und Hausnummer]", "[PLZ] Dortmund", "Deutschland"],
+//     mail: "mareike.kirch@googlemail.com",
+//     zusatz: [
+//       "Vertreten durch: Mareike Kirch (Geschäftsführerin)",
+//       "Registergericht: Amtsgericht Dortmund",
+//       "Registernummer: HRB [Nummer]",
+//       "USt-IdNr.: [falls vorhanden]",
+//     ],
+//   },
+// ],
+// ---------------------------------------------------------------------------
+
 export const impressum = {
   kicker: "Legal",
   headline: "Impressum",
