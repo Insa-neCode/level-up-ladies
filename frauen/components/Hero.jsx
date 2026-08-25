@@ -1,7 +1,7 @@
 import Button from "./Button.jsx";
 import Marker from "./Marker.jsx";
 import Tape from "./Tape.jsx";
-import { hero } from "../content.js";
+import { hero, signupHref } from "../content.js";
 
 export default function Hero() {
   return (
@@ -85,7 +85,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <Button pulse className="w-full sm:w-auto">
+            <Button href={signupHref} pulse className="w-full sm:w-auto">
               {hero.ctaPrimary}
             </Button>
             <Button variant="outline" scrollTo="#workshop" className="w-full sm:w-auto">

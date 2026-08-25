@@ -188,3 +188,11 @@ export const footer = {
   copyright: "© 2026 Level Up Ladies | Für Lehrerinnen, von einer Lehrerin",
   madeWith: "Made with ❤️ and Claude",
 };
+
+// Anmeldung. Solange kein Buchungstool angebunden ist, oeffnet der Button eine
+// vorbereitete E-Mail — funktioniert ohne Konto, Server und Datenschutzerklaerung.
+// Sobald ein Formular (z. B. Tally) steht, wird hier dessen Link eingetragen.
+export const signupHref =
+  "mailto:insariese@gmail.com" +
+  "?subject=Anmeldung%3A%20Level%20Up%2C%20Ladies%21%20am%2012.09.2026" +
+  "&body=Hallo Insa und Mareike,%0D%0A%0D%0Aich moechte mir einen Platz im Workshop am 12. September 2026 um 10:30 Uhr sichern.%0D%0A%0D%0AName:%0D%0ASchule%20%2F%20Fach%3A%0D%0A%0D%0AViele Gruesse";

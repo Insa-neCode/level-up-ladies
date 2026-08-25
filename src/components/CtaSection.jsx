@@ -1,5 +1,5 @@
 import Button from "./Button.jsx";
-import { cta } from "../data/content.js";
+import { cta, signupHref } from "../data/content.js";
 
 export default function CtaSection() {
   return (
@@ -37,7 +37,7 @@ export default function CtaSection() {
         </p>
 
         <div className="mt-10 flex justify-center">
-          <Button variant="light" size="lg" className="w-full sm:w-auto">
+          <Button href={signupHref} variant="light" size="lg" className="w-full sm:w-auto">
             {cta.button}
           </Button>
         </div>

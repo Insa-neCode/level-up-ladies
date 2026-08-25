@@ -4,7 +4,7 @@ import Marker from "./Marker.jsx";
 import Tape from "./Tape.jsx";
 import Sticker from "./Sticker.jsx";
 import GoodiebagIcon from "./GoodiebagIcon.jsx";
-import { workshop } from "../data/content.js";
+import { workshop, signupHref } from "../data/content.js";
 
 export default function WorkshopDeepDive() {
   return (
@@ -189,7 +189,9 @@ export default function WorkshopDeepDive() {
           </div>
 
           <div className="mt-10">
-            <Button variant="outline">{workshop.ctaLabel}</Button>
+            <Button href={signupHref} variant="outline">
+              {workshop.ctaLabel}
+            </Button>
           </div>
         </div>
       </div>

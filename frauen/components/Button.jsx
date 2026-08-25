@@ -42,9 +42,17 @@ export default function Button({
     </>
   );
 
+  // mailto- und interne Ziele nicht in einem neuen Tab oeffnen
+  const extern = href?.startsWith("http");
+
   if (href) {
     return (
-      <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+      <a
+        href={href}
+        className={classes}
+        target={extern ? "_blank" : undefined}
+        rel={extern ? "noopener noreferrer" : undefined}
+      >
         {inner}
       </a>
     );
