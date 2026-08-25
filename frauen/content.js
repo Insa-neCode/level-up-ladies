@@ -75,7 +75,7 @@ export const about = {
       photoLabel: "Foto: public/frauen/mareike.jpg",
       paragraphs: [
         "Ich bin Mareike. Ich begleite Frauen ab 30 durch den Umbruch: Jobwechsel, Neuausrichtung, KI im Arbeitsalltag. Heute als Gründerin und Geschäftsführerin von Design Your Career, davor als Co-Founderin und CEO von Coding Bootcamps Europe.",
-        "Ich sehe dasselbe Muster wie Insa, nur eine Branche weiter: Es fehlt nicht das Können, es fehlt der Zugang. Wer ihre Werkzeuge beherrscht, verhandelt anders – über ihr Gehalt, ihre Rolle und ihre Zukunft.",
+        "In der Beratung sehe ich es täglich: Es fehlt nicht das Können, es fehlt der Zugang. Wer ihre Werkzeuge beherrscht, verhandelt anders – über ihr Gehalt, ihre Rolle und ihre Zukunft.",
       ],
       quote: "Kein Talent-Problem. Ein Zugangs-Problem.",
     },
