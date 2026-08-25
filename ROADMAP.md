@@ -55,8 +55,8 @@ zählt aber keine Plätze und verlangt von der Interessentin ein eingerichtetes 
 Anleitung mit allen Feldern, dem Skript für die Platzbegrenzung und den
 Datenschutz-Hinweisen: **[docs/anmeldung-google-forms.md](docs/anmeldung-google-forms.md)**
 
-- [ ] Formular bei Google anlegen (macht ihr selbst)
-- [ ] Link in `signup.googleFormUrl` eintragen — in **beiden** Content-Dateien
+- [x] Formular bei Google angelegt
+- [x] Link in `signup.googleFormUrl` eingetragen (Testformular — vor dem Bewerben gegen das echte tauschen)
 - [ ] Platzbegrenzung: entweder von Hand abschalten oder das Apps-Script einrichten
 - [ ] Datenschutzerklärung ergänzen (siehe 1.3) — **vorher nicht verlinken**
 

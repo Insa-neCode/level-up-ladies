@@ -238,7 +238,8 @@ export const footer = {
 // Solange das Feld leer ist, oeffnen die Buttons eine vorbereitete E-Mail —
 // die Seite funktioniert also in jedem Fall.
 export const signup = {
-  googleFormUrl: "",
+  googleFormUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSewJBJ9aKOCzzsMVyLf5RTiJwdLGbUws9mINSYqgWMp_XOcuw/viewform",
   mailTo: "insariese@gmail.com",
 };
 
