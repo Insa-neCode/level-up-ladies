@@ -176,7 +176,7 @@ export const series = {
     },
     {
       level: "Level 03",
-      title: "Visuell gestalten mit Canva",
+      title: "Visuell gestalten",
       description: "Grafiken, die aussehen wie gekauft – ohne Design-Studium.",
       duration: "60 Min",
       tag: "Glow up",
