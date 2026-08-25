@@ -20,6 +20,8 @@ muss zweimal gemacht werden** — einmal in `src/`, einmal in `frauen/`. Das gil
 
 Die Fussleisten verlinken wechselseitig aufeinander (`footer.crossLink` im jeweiligen Content).
 
+Offene Punkte und was dafür noch fehlt: **[ROADMAP.md](ROADMAP.md)**
+
 ## Lokal starten
 
 ```bash
