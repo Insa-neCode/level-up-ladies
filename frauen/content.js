@@ -38,6 +38,8 @@ export const hero = {
   },
   ctaPrimary: "Jetzt anmelden",
   ctaSecondary: "Level 01 ansehen",
+  // Leadmagnet: der kostenlose Selbsttest unter /quiz/
+  quizLink: { label: "Erst mal testen: Wo stehst du im KI-Gap?", to: "quiz/" },
   portraitAlt: "Porträt einer Frau in Schwarz-Weiß mit Neon-Pink Akzenten",
 };
 
@@ -221,8 +223,11 @@ export const footer = {
   ],
   outro: "Setup gemacht. Masterprompt läuft. Kreativ gestartet.",
   crossLink: { label: "Du bist Lehrerin? → Zur Seite für den Bildungsbereich", to: "" },
-  // Die Impressum-Seite selbst (impressum/) wird in einer parallelen Sitzung gebaut.
-  legal: { label: "Impressum", to: "impressum/" },
+  quizLink: { label: "Der Level-Check: Wo stehst du im KI-Gap?", to: "quiz/" },
+  legal: [
+    { label: "Impressum", to: "impressum/" },
+    { label: "Datenschutz", to: "datenschutz/" },
+  ],
   copyright: "© 2026 Level Up Ladies | Von Frauen, für Frauen",
   madeWith: "Made with ❤️ and Claude",
 };

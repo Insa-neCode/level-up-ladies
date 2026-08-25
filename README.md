@@ -3,14 +3,15 @@
 React + Vite + Tailwind CSS v4. Dark Theme, Neon-Pink Akzente, Struktur exakt nach
 `level_up_ladies_landingpage_blueprint.md`.
 
-## Zwei Landingpages, ein Projekt
+## Drei Seiten, ein Projekt
 
 | Seite | URL | Zielgruppe | Wo liegt sie? | Bilder |
 |---|---|---|---|---|
 | 1 | `/` | Frauen im Bildungsbereich (Lehrerinnen) | `index.html` + `src/` | `public/` |
 | 2 | `/frauen/` | Alle Frauen — Einsteigerinnen und alle, die KI systematisch nutzen wollen | **`frauen/`** (vollstaendig, mit eigener README) | `public/frauen/` |
+| 3 | `/quiz/` | Leadmagnet: kostenloser Selbsttest „Der Level-Check" | **`quiz/`** (vollstaendig, mit eigener README) | keine |
 
-**Die beiden Seiten teilen sich keine Datei.** Der Ordner `frauen/` enthaelt eigene
+**Die Seiten teilen sich keine Datei.** Der Ordner `frauen/` enthaelt eigene
 Kopien von Komponenten, Design-Tokens und Bildern. Wer nur an Seite 2 arbeitet, findet
 dort alles und kann Seite 1 nicht versehentlich veraendern — und umgekehrt.
 
@@ -98,6 +99,15 @@ frauen/                       ── SEITE 2  (/frauen/) — eigenstaendig ─�
   index.css                   eigene Kopie der Design-Tokens
   hooks/  components/         eigene Kopien; statt About.jsx: AboutTeam.jsx
                               ("Wer sind wir?", zwei Personen)
+
+quiz/                         ── LEADMAGNET  (/quiz/) — eigenstaendig ──
+  README.md                   Konzept, Auswertungslogik, offene Punkte
+  index.html  main.jsx  App.jsx
+  content.js                  Fragen, Ergebnisse, Texte
+  scoring.js                  Auswertung: Praxis- und Zutrauens-Wert, Level, Gap
+  index.css  hooks/           eigene Kopien
+  components/                 Quiz.jsx QuestionCard.jsx Result.jsx GapMeter.jsx
+                              GapSection.jsx + Kopien der Deko-Komponenten
 
 public/                       Bilder Seite 1
 public/frauen/                Bilder Seite 2

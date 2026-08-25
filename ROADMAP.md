@@ -25,8 +25,14 @@ Bis dahin bleiben Insa und Mareike als private Diensteanbieterinnen eingetragen 
 **Wer:** Frage an Anwältin oder Steuerberatung, nicht am Rechner zu klären.
 
 ### 1.3 Datenschutzerklärung
-**Was:** Fehlt bislang komplett. Sobald ein Anmeldeformular Daten entgegennimmt (Punkt 2.1), ist sie Pflicht — die Informationspflicht nach Art. 13 DSGVO greift, sobald personenbezogene Daten erhoben werden.
-**Nebenpunkt:** Die Seiten laden Schriften von Google Fonts, also entsteht bei jedem Aufruf eine Verbindung zu Google-Servern mit IP-Adresse der Besucherin. Sauberste Lösung: Schriften selbst hosten (`public/fonts/`), dann entfällt das Thema. Aufwand: gering.
+**Stand:** Seite steht unter `/datenschutz/`, aus beiden Footern verlinkt.
+Inhalt: `datenschutz/content.js`. Beschrieben sind Hosting über GitHub Pages,
+Google Fonts, Kontakt per E-Mail, die geplante Anmeldung über Google Forms,
+Betroffenenrechte und die zuständige Aufsichtsbehörde (LDI NRW).
+
+- [ ] **Von einer Juristin prüfen lassen** — der Text ist sorgfältig, aber keine Rechtsberatung
+- [ ] Abschnitt „Anmeldung zum Workshop" gilt erst, sobald das Google-Formular live ist
+- [ ] Schriften selbst hosten, dann entfällt der Google-Fonts-Abschnitt ganz (kleiner Aufwand)
 
 ### 1.4 Sobald das Angebot kostenpflichtig wird
 - [ ] Widerrufsbelehrung
@@ -53,6 +59,12 @@ Datenschutz-Hinweisen: **[docs/anmeldung-google-forms.md](docs/anmeldung-google-
 - [ ] Link in `signup.googleFormUrl` eintragen — in **beiden** Content-Dateien
 - [ ] Platzbegrenzung: entweder von Hand abschalten oder das Apps-Script einrichten
 - [ ] Datenschutzerklärung ergänzen (siehe 1.3) — **vorher nicht verlinken**
+
+Der Level-Check unter `/quiz/` ist die Vorstufe davon: Er sammelt bewusst nichts ein und
+rechnet nur im Browser, deshalb darf er schon jetzt online. Die Anmeldung aus dem
+Ergebnis läuft über dieselbe vorbereitete E-Mail, trägt aber zusätzlich das erreichte
+Level in den Betreff. Sobald das Formular steht, genügt ein Eintrag in
+`quiz/content.js` (`leadForm`) — die Ergebnisseite blendet den Button dann selbst ein.
 - [ ] Offen: Google bietet privaten Gmail-Konten keinen AV-Vertrag. Entweder Google
       Workspace nutzen oder später auf Tally wechseln (Belgien, Server Frankfurt, AV-Vertrag).
 
@@ -68,7 +80,14 @@ Datenschutz-Hinweisen: **[docs/anmeldung-google-forms.md](docs/anmeldung-google-
 **Was:** Die Season-Sektion zeigt Level 02–04 plus „+ 5 weitere Level". Titel und Beschreibungen der übrigen Workshops fehlen, ebenso eigene Detailseiten.
 **Wo:** `series.workshops` in beiden Content-Dateien.
 
-### 3.2 Weitere Termine
+### 3.2 Quellen für die Zahlen im Level-Check
+**Was:** Die Sektion „The Gap" auf `/quiz/` nennt 12 %, 22 % und 18 %. Die Zahlen stammen
+aus der Kampagnengrafik, die Belegstellen fehlen noch.
+**Wo:** `quiz/content.js`, `gap.stats[].source` — solange das Feld leer ist, erscheint
+keine Quellenzeile.
+**Warum wichtig:** Sobald die Seite beworben wird, sollten die Zahlen belegbar sein.
+
+### 3.3 Weitere Termine
 **Was:** Aktuell ist ein Termin hinterlegt: 12. September 2026, 10:30 Uhr.
 **Wo:** `cta.note` in beiden Content-Dateien.
 
@@ -77,8 +96,8 @@ Datenschutz-Hinweisen: **[docs/anmeldung-google-forms.md](docs/anmeldung-google-
 ## 4. Technik
 
 ### 4.1 Doppelter Komponenten-Baum
-**Was:** `src/` und `frauen/` enthalten dieselben Komponenten zweimal. Jede Design-Änderung muss doppelt gemacht werden — genau das ist bei „Dein Goodiebag" und beim Footer-Umbau passiert.
-**Vorschlag:** Gemeinsame Komponenten in einen geteilten Ordner ziehen, Inhalte bleiben getrennt. Lohnt sich, sobald eine dritte Seite dazukommt.
+**Was:** `src/`, `frauen/` und `quiz/` enthalten dieselben Deko-Komponenten dreimal. Jede Design-Änderung muss doppelt gemacht werden — genau das ist bei „Dein Goodiebag" und beim Footer-Umbau passiert.
+**Vorschlag:** Gemeinsame Komponenten in einen geteilten Ordner ziehen, Inhalte bleiben getrennt. Mit `/quiz/` ist die dritte Seite jetzt da — ab hier lohnt es sich.
 
 ### 4.2 Veraltete Actions im Deploy-Workflow
 **Was:** GitHub warnt bei jedem Lauf, dass `actions/checkout@v4`, `actions/setup-node@v4` und `actions/upload-artifact@v4` auf Node 20 zielen und ersatzweise auf Node 24 laufen. Funktioniert, sollte aber irgendwann auf `@v5` gehoben werden.
@@ -95,3 +114,4 @@ Datenschutz-Hinweisen: **[docs/anmeldung-google-forms.md](docs/anmeldung-google-
 - [x] Impressum mit Anschrift Köln, aus beiden Footern verlinkt
 - [x] Workshop-Termin 12.09.2026, 10:30 Uhr
 - [x] „Dein Goodiebag" mit handgezeichnetem Tüten-Icon
+- [x] Leadmagnet `/quiz/` — „Der Level-Check", verlinkt aus beiden Landingpages

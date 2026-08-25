@@ -93,6 +93,17 @@ export default function Hero() {
             </Button>
           </div>
 
+          {/* Leadmagnet: kostenloser Selbsttest, ohne Anmeldung */}
+          {hero.quizLink && (
+            <a
+              href={`${import.meta.env.BASE_URL}${hero.quizLink.to}`}
+              className="mt-6 inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.2em] text-magenta underline decoration-magenta/40 underline-offset-[6px] transition-colors duration-300 hover:text-magenta-soft hover:decoration-magenta"
+            >
+              {hero.quizLink.label}
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          )}
+
           <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.22em] text-faint md:mt-14">
             {hero.byline}
           </p>

@@ -17,10 +17,13 @@ export default defineConfig({
       // Zwei Landingpages aus einem Projekt:
       //   /         -> Zielgruppe Bildungsbereich (index.html)
       //   /frauen/  -> Zielgruppe alle Frauen (frauen/index.html)
+      //   /quiz/    -> Leadmagnet "Der Level-Check" (quiz/index.html)
       input: {
         main: resolve(root, 'index.html'),
         frauen: resolve(root, 'frauen/index.html'),
+        quiz: resolve(root, 'quiz/index.html'),
         impressum: resolve(root, 'impressum/index.html'),
+        datenschutz: resolve(root, 'datenschutz/index.html'),
       },
     },
   },

@@ -108,15 +108,14 @@ export default function Footer() {
         <div className="mt-8 flex flex-col gap-2 border-t border-hair pt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-faint sm:flex-row sm:items-center sm:justify-between">
           <p>{footer.copyright}</p>
           <div className="flex items-center gap-5">
-            {footer.legal?.map((eintrag) => (
+            {footer.legal && (
               <a
-                key={eintrag.to}
-                href={`${import.meta.env.BASE_URL}${eintrag.to}`}
+                href={`${import.meta.env.BASE_URL}${footer.legal.to}`}
                 className="uppercase tracking-[0.2em] text-white/75 underline-offset-4 transition-colors duration-300 hover:text-magenta hover:underline"
               >
-                {eintrag.label}
+                {footer.legal.label}
               </a>
-            ))}
+            )}
             <p>{footer.madeWith}</p>
           </div>
         </div>

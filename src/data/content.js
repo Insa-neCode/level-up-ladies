@@ -182,9 +182,13 @@ export const footer = {
     { label: "LinkedIn Insa", href: "https://www.linkedin.com/in/insa-riese-303946316/" },
     { label: "LinkedIn Mareike", href: "https://www.linkedin.com/in/mareikekirch/" },
   ],
-  legal: { label: "Impressum", to: "impressum/" },
+  legal: [
+    { label: "Impressum", to: "impressum/" },
+    { label: "Datenschutz", to: "datenschutz/" },
+  ],
   outro: "Setup gemacht. Masterprompt läuft. Kreativ gestartet.",
   crossLink: { label: "Nicht aus der Schule? → Die Seite für alle Frauen", to: "frauen/" },
+  quizLink: { label: "Der Level-Check: Wo stehst du im KI-Gap?", to: "quiz/" },
   copyright: "© 2026 Level Up Ladies | Für Lehrerinnen, von einer Lehrerin",
   madeWith: "Made with ❤️ and Claude",
 };

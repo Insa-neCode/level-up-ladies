@@ -75,29 +75,46 @@ export default function Footer() {
               ))}
             </ul>
 
-            {footer.legal && (
-              <p className="mt-6">
-                <a
-                  href={`${import.meta.env.BASE_URL}${footer.legal.to}`}
-                  className="font-mono text-[10px] uppercase tracking-[0.24em] text-magenta transition-colors hover:text-magenta-soft"
-                >
-                  {footer.legal.label}
-                </a>
-              </p>
+            {footer.legal?.length > 0 && (
+              <ul className="mt-6 space-y-2">
+                {footer.legal.map((eintrag) => (
+                  <li key={eintrag.to}>
+                    <a
+                      href={`${import.meta.env.BASE_URL}${eintrag.to}`}
+                      className="font-mono text-[10px] uppercase tracking-[0.24em] text-magenta transition-colors hover:text-magenta-soft"
+                    >
+                      {eintrag.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             )}
           </div>
         </div>
 
         {/* Querverweis auf die jeweils andere Landingpage */}
-        {footer.crossLink && (
-          <a
-            href={`${import.meta.env.BASE_URL}${footer.crossLink.to}`}
-            className="mt-10 inline-flex items-center gap-3 border border-magenta/50 px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-magenta transition-colors duration-300 hover:bg-magenta hover:text-white"
-          >
-            {footer.crossLink.label}
-            <span aria-hidden="true">&rarr;</span>
-          </a>
-        )}
+        {/* Querverweise: andere Landingpage und der kostenlose Level-Check */}
+        <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
+          {footer.crossLink && (
+            <a
+              href={`${import.meta.env.BASE_URL}${footer.crossLink.to}`}
+              className="inline-flex items-center gap-3 border border-magenta/50 px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-magenta transition-colors duration-300 hover:bg-magenta hover:text-white"
+            >
+              {footer.crossLink.label}
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          )}
+
+          {footer.quizLink && (
+            <a
+              href={`${import.meta.env.BASE_URL}${footer.quizLink.to}`}
+              className="inline-flex items-center gap-3 border border-magenta bg-magenta/10 px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-magenta transition-colors duration-300 glow-box-sm hover:bg-magenta hover:text-white"
+            >
+              {footer.quizLink.label}
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          )}
+        </div>
 
         <p className="mt-12 font-marker text-2xl text-magenta glow-text md:text-3xl">
           {footer.outro}
