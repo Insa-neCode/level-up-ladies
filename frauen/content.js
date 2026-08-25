@@ -67,7 +67,7 @@ export const about = {
       tag: "Player 002",
       name: "Mareike",
       role: "Karriere-Expertin · Gründerin, Design Your Career",
-      linkedin: "[LinkedIn-Profil von Mareike]",
+      linkedin: "https://www.linkedin.com/in/mareikekirch/",
       initials: "MK",
       photo: "mareike.jpg",
       photoPosition: "62% 22%",
@@ -133,7 +133,7 @@ export const workshop = {
     },
   ],
   cardScribble: "Klick. Prompt. Done.",
-  outcomesKicker: "The Loot",
+  outcomesKicker: "Dein Goodiebag",
   outcomesHeadline: "Das nimmst du mit:",
   outcomes: [
     "Ein Claude-Setup, das dich und deine Arbeit kennt",
@@ -217,7 +217,7 @@ export const footer = {
   socialHeadline: "Social",
   social: [
     { label: "LinkedIn Insa", href: "https://www.linkedin.com/in/insa-riese-303946316/" },
-    { label: "LinkedIn Mareike", href: "[LinkedIn-Profil von Mareike]" },
+    { label: "LinkedIn Mareike", href: "https://www.linkedin.com/in/mareikekirch/" },
   ],
   outro: "Setup gemacht. Masterprompt läuft. Kreativ gestartet.",
   crossLink: { label: "Du bist Lehrerin? → Zur Seite für den Bildungsbereich", to: "" },

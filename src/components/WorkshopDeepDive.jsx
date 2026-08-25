@@ -3,6 +3,7 @@ import Button from "./Button.jsx";
 import Marker from "./Marker.jsx";
 import Tape from "./Tape.jsx";
 import Sticker from "./Sticker.jsx";
+import GoodiebagIcon from "./GoodiebagIcon.jsx";
 import { workshop } from "../data/content.js";
 
 export default function WorkshopDeepDive() {
@@ -121,9 +122,12 @@ export default function WorkshopDeepDive() {
         {/* The Loot */}
         <div className="reveal mt-24 grid grid-cols-1 gap-10 border-t border-hair pt-12 md:grid-cols-[0.9fr_1.1fr] md:gap-14">
           <div>
-            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.34em] text-magenta glow-text">
-              {workshop.outcomesKicker}
-            </p>
+            <div className="flex items-center gap-4">
+              <GoodiebagIcon className="h-14 w-14 shrink-0 md:h-16 md:w-16" />
+              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.34em] text-magenta glow-text">
+                {workshop.outcomesKicker}
+              </p>
+            </div>
             <h3 className="mt-3 font-display text-[30px] leading-tight font-black italic text-white md:text-[40px]">
               {workshop.outcomesHeadline}
             </h3>

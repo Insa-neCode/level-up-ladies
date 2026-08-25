@@ -62,7 +62,7 @@ export const about = {
       photoPosition: "62% 22%",
       photoAlt: "Mareike Kirch, Expertin für Karriereentwicklung",
       photoLabel: "Foto: public/mareike.jpg",
-      linkedin: "[LinkedIn-Profil von Mareike]",
+      linkedin: "https://www.linkedin.com/in/mareikekirch/",
       paragraphs: [
         "Ich bin Mareike. Ich begleite Frauen ab 30 durch den Umbruch: Jobwechsel, Neuausrichtung, KI im Arbeitsalltag. Heute als Gründerin und Geschäftsführerin von Design Your Career, davor als Co-Founderin und CEO von Coding Bootcamps Europe.",
         "In der Beratung sehe ich es täglich: Es fehlt nicht das Können, es fehlt der Zugang. Wer ihre Werkzeuge beherrscht, verhandelt anders – über ihre Zeit, ihre Rolle und ihre Zukunft.",
@@ -104,7 +104,7 @@ export const workshop = {
     },
   ],
   cardScribble: "Klick. Prompt. Done.",
-  outcomesKicker: "The Loot",
+  outcomesKicker: "Dein Goodiebag",
   outcomesHeadline: "Das nimmst du mit:",
   outcomes: [
     "Ein Claude-Setup, das dich kennt",
@@ -180,7 +180,7 @@ export const footer = {
   socialHeadline: "Social",
   social: [
     { label: "LinkedIn Insa", href: "https://www.linkedin.com/in/insa-riese-303946316/" },
-    { label: "LinkedIn Mareike", href: "[LinkedIn-Profil von Mareike]" },
+    { label: "LinkedIn Mareike", href: "https://www.linkedin.com/in/mareikekirch/" },
   ],
   legal: { label: "Impressum", to: "impressum/" },
   outro: "Setup gemacht. Masterprompt läuft. Kreativ gestartet.",
