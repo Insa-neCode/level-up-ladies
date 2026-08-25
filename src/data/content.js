@@ -189,10 +189,22 @@ export const footer = {
   madeWith: "Made with ❤️ and Claude",
 };
 
-// Anmeldung. Solange kein Buchungstool angebunden ist, oeffnet der Button eine
-// vorbereitete E-Mail — funktioniert ohne Konto, Server und Datenschutzerklaerung.
-// Sobald ein Formular (z. B. Tally) steht, wird hier dessen Link eingetragen.
-export const signupHref =
-  "mailto:insariese@gmail.com" +
+// Anmeldung.
+// 1. Google-Formular anlegen, dann "Senden" -> Link-Symbol -> Link kopieren.
+// 2. Den Link hier eintragen. Ab dann fuehren alle Anmelde-Buttons dorthin.
+// Solange das Feld leer ist, oeffnen die Buttons eine vorbereitete E-Mail —
+// die Seite funktioniert also in jedem Fall.
+export const signup = {
+  googleFormUrl: "",
+  mailTo: "insariese@gmail.com",
+};
+
+const mailFallback =
+  "mailto:" +
+  signup.mailTo +
   "?subject=Anmeldung%3A%20Level%20Up%2C%20Ladies%21%20am%2012.09.2026" +
-  "&body=Hallo Insa und Mareike,%0D%0A%0D%0Aich moechte mir einen Platz im Workshop am 12. September 2026 um 10:30 Uhr sichern.%0D%0A%0D%0AName:%0D%0ASchule%20%2F%20Fach%3A%0D%0A%0D%0AViele Gruesse";
+  "&body=Hallo%20Insa%20und%20Mareike%2C%0D%0A%0D%0A" +
+  "ich%20moechte%20mir%20einen%20Platz%20im%20Workshop%20am%2012.%20September%202026%20um%2010%3A30%20Uhr%20sichern.%0D%0A%0D%0A" +
+  "Name%3A%0D%0ASchule%20%2F%20Fach%3A%0D%0A%0D%0AViele%20Gruesse";
+
+export const signupHref = signup.googleFormUrl || mailFallback;

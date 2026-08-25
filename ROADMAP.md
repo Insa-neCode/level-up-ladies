@@ -45,19 +45,16 @@ Dafür einmal anwaltlich draufschauen lassen — das ist kein Copy-Paste-Thema.
 zählt aber keine Plätze und verlangt von der Interessentin ein eingerichtetes Mailprogramm.
 **Wo:** `signupHref` in `src/data/content.js` und `frauen/content.js`.
 
-**Nächster Ausbau — Empfehlung Tally:** kostenlos, unbegrenzt viele Einsendungen,
-Formular schließt automatisch nach X Anmeldungen, Anbieter sitzt in Belgien mit
-Servern in Frankfurt und bietet einen AV-Vertrag. Ablauf:
+**Nächster Schritt — Google Forms** (entschieden am 25.08.2026).
+Anleitung mit allen Feldern, dem Skript für die Platzbegrenzung und den
+Datenschutz-Hinweisen: **[docs/anmeldung-google-forms.md](docs/anmeldung-google-forms.md)**
 
-- [ ] Konto bei tally.so anlegen (macht ihr selbst)
-- [ ] Formular bauen: Name, E-Mail, Kontext, Einwilligung
-- [ ] Antwortlimit auf die Platzzahl setzen
-- [ ] Formular-Link oder ID an mich — ich hänge es an die Buttons
-- [ ] Datenschutzerklärung ergänzen (siehe 1.3) — **vorher nicht live nehmen**
-
-Alternativen, falls es doch echte Terminbuchung sein soll: Cal.com (Slots mit Sitzplätzen,
-kostenlos für eine Person, mit Cal.com-Branding) oder Eventbrite (Ticketing mit Warteliste,
-für kostenlose Veranstaltungen gebührenfrei, aber US-Anbieter — mehr DSGVO-Aufwand).
+- [ ] Formular bei Google anlegen (macht ihr selbst)
+- [ ] Link in `signup.googleFormUrl` eintragen — in **beiden** Content-Dateien
+- [ ] Platzbegrenzung: entweder von Hand abschalten oder das Apps-Script einrichten
+- [ ] Datenschutzerklärung ergänzen (siehe 1.3) — **vorher nicht verlinken**
+- [ ] Offen: Google bietet privaten Gmail-Konten keinen AV-Vertrag. Entweder Google
+      Workspace nutzen oder später auf Tally wechseln (Belgien, Server Frankfurt, AV-Vertrag).
 
 ### 2.2 Restliche Links
 **Was:** Im Footer stehen „Über Level Up Ladies", „Die Workshop-Season", „Anmeldung", „Kontakt" noch als reiner Text. Instagram fehlt als Kanal.

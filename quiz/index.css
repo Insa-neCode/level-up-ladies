@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/* =========================================================
+   LEVEL UP, LADIES — Fashion-Magazine Edition
+   Schwarz · Neon-Magenta · Didone-Serife · Marker-Handschrift
+   ========================================================= */
+@theme {
+  --color-ink: #08080a;
+  --color-ink-2: #111114;
+  --color-ink-3: #18181e;
+  --color-hair: #2a2a33;
+
+  --color-magenta: #fd05d4;
+  --color-magenta-soft: #ff5ce0;
+  --color-magenta-deep: #c000a2;
+
+  --color-dim: #c6c5cf;
+  --color-faint: #8a8995;
+
+  --font-display: "Playfair Display", Didot, "Bodoni MT", Georgia, serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-marker: "Caveat", "Segoe Script", cursive;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-marquee-rev: marquee-rev 38s linear infinite;
+  --animate-flicker: flicker 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2.6s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes marquee-rev {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.55; }
+  94% { opacity: 1; }
+  96% { opacity: 0.7; }
+  97% { opacity: 1; }
+}
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(253, 5, 212, 0), 0 0 22px rgba(253, 5, 212, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(253, 5, 212, 0.12), 0 0 46px rgba(253, 5, 212, 0.7);
+  }
+}
+
+/* ---------- Neon-Glow ---------- */
+@utility glow-text {
+  text-shadow:
+    0 0 6px rgba(253, 5, 212, 0.9),
+    0 0 22px rgba(253, 5, 212, 0.6),
+    0 0 54px rgba(253, 5, 212, 0.4);
+}
+
+@utility glow-text-white {
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.35),
+    0 0 36px rgba(253, 5, 212, 0.45);
+}
+
+@utility glow-box {
+  box-shadow:
+    0 0 14px rgba(253, 5, 212, 0.55),
+    0 0 44px rgba(253, 5, 212, 0.3),
+    inset 0 0 14px rgba(253, 5, 212, 0.18);
+}
+
+@utility glow-box-sm {
+  box-shadow:
+    0 0 10px rgba(253, 5, 212, 0.5),
+    0 0 26px rgba(253, 5, 212, 0.25);
+}
+
+/* Washi-Tape: rosa Klebestreifen mit gerissenen Kanten */
+@utility tape {
+  background: linear-gradient(
+    100deg,
+    rgba(253, 5, 212, 0.75),
+    rgba(255, 92, 224, 0.55) 45%,
+    rgba(253, 5, 212, 0.8)
+  );
+  clip-path: polygon(
+    0% 12%, 6% 0%, 14% 10%, 24% 2%, 36% 11%, 48% 1%, 60% 10%, 72% 2%,
+    84% 11%, 94% 3%, 100% 12%, 100% 88%, 93% 100%, 82% 90%, 70% 99%,
+    58% 89%, 46% 98%, 34% 89%, 22% 99%, 11% 90%, 3% 100%, 0% 88%
+  );
+  box-shadow: 0 0 18px rgba(253, 5, 212, 0.45);
+}
+
+/* Magazin-Raster im Hintergrund */
+@utility grid-bg {
+  background-image:
+    linear-gradient(rgba(253, 5, 212, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(253, 5, 212, 0.07) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+/* Scroll-Reveal: Startzustand greift nur mit aktivem JS */
+.js-reveal .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.js-reveal .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--color-ink);
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-ink);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-magenta);
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-magenta);
+  outline-offset: 3px;
+}
