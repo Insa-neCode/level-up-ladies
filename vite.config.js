@@ -20,6 +20,7 @@ export default defineConfig({
       input: {
         main: resolve(root, 'index.html'),
         frauen: resolve(root, 'frauen/index.html'),
+        impressum: resolve(root, 'impressum/index.html'),
       },
     },
   },

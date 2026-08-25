@@ -3,14 +3,13 @@ import SectionHeading from "./SectionHeading.jsx";
 import Marker from "./Marker.jsx";
 import Tape from "./Tape.jsx";
 import Sticker from "./Sticker.jsx";
-import { useContent } from "../data/ContentContext.jsx";
+import { about } from "../data/content.js";
 
 /**
  * Das Foto liegt unter public/insa.jpg. Fehlt es, faellt die Sektion
  * automatisch auf den Platzhalter zurueck — die Seite bleibt heil.
  */
 export default function About() {
-  const { about } = useContent();
   const [hasPhoto, setHasPhoto] = useState(true);
 
   return (

@@ -1,7 +1,7 @@
 import Button from "./Button.jsx";
 import Marker from "./Marker.jsx";
 import Tape from "./Tape.jsx";
-import { hero } from "../data/content.js";
+import { hero } from "../content.js";
 
 export default function Hero() {
   return (
@@ -105,7 +105,7 @@ export default function Hero() {
 
           <div className="relative border border-magenta/50 glow-box">
             <img
-              src={`${import.meta.env.BASE_URL}hero-portrait.png`}
+              src={`${import.meta.env.BASE_URL}frauen/hero-portrait.png`}
               alt={hero.portraitAlt}
               className="block h-auto w-full"
               width="324"

@@ -1,4 +1,4 @@
-import { ticker } from "../data/content.js";
+import { ticker } from "../content.js";
 
 /**
  * Endlos laufendes Laufband wie der Titelbalken eines Magazins.

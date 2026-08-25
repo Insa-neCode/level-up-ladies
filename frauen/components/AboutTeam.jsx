@@ -1,9 +1,9 @@
 import { useState } from "react";
-import SectionHeading from "../src/components/SectionHeading.jsx";
-import Marker from "../src/components/Marker.jsx";
-import Tape from "../src/components/Tape.jsx";
-import Sticker from "../src/components/Sticker.jsx";
-import { useContent } from "../src/data/ContentContext.jsx";
+import SectionHeading from "./SectionHeading.jsx";
+import Marker from "./Marker.jsx";
+import Tape from "./Tape.jsx";
+import Sticker from "./Sticker.jsx";
+import { about } from "../content.js";
 
 /**
  * "Wer sind wir?" — die Variante fuer zwei Personen (Player 001 + Player 002).
@@ -13,7 +13,6 @@ import { useContent } from "../src/data/ContentContext.jsx";
  * automatisch auf den Neon-Platzhalter zurueck — die Seite bleibt heil.
  */
 export default function AboutTeam() {
-  const { about } = useContent();
 
   return (
     <section id="ueber-uns" className="relative bg-white py-20 md:py-28">
@@ -72,7 +71,7 @@ function Person({ person, index }) {
         <div className="relative aspect-4/5 w-full overflow-hidden bg-black">
           {hasPhoto && person.photo ? (
             <img
-              src={`${import.meta.env.BASE_URL}${person.photo}`}
+              src={`${import.meta.env.BASE_URL}frauen/${person.photo}`}
               alt={person.photoAlt}
               onError={() => setHasPhoto(false)}
               className="h-full w-full object-cover grayscale contrast-115"
@@ -115,6 +114,18 @@ function Person({ person, index }) {
       <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.24em] text-magenta">
         {person.role}
       </p>
+
+      {person.linkedin?.startsWith("http") && (
+        <a
+          href={person.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 inline-flex items-center gap-2 border-b border-black/20 pb-0.5 font-mono text-[11px] uppercase tracking-[0.2em] text-black/70 transition-colors hover:border-magenta hover:text-magenta"
+        >
+          LinkedIn
+          <span aria-hidden="true">→</span>
+        </a>
+      )}
 
       <div className="mt-6 space-y-4">
         {person.paragraphs.map((p) => (

@@ -7,6 +7,10 @@ import CtaSection from "./components/CtaSection.jsx";
 import Footer from "./components/Footer.jsx";
 import { useReveal } from "./hooks/useReveal.js";
 
+/**
+ * Sektions-Reihenfolge der zweiten Landingpage (/frauen/).
+ * Eigenstaendige Kopie — aendert nichts an Seite 1.
+ */
 export default function App() {
   useReveal();
 

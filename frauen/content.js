@@ -1,12 +1,14 @@
 // Inhalte der zweiten Landingpage — Zielgruppe: alle Frauen, nicht nur Bildung.
-// Struktur identisch zu content.js, damit beide Seiten dieselben Komponenten nutzen.
+// Eigenstaendige Datei — Seite 1 hat ihre eigene unter src/data/content.js.
 //
 // OFFEN / NOCH ZU ERSETZEN:
 //   - about.people[1]  -> alle Angaben zu Mareike (Nachname, Rolle, Text, Zitat)
 //   - hero.byline      -> Nachname Mareike
 //   - footer.contact   -> Kontaktdaten Mareike
 //   - cta.note         -> [DATUM]
-//   - public/mareike.jpg ablegen (sonst greift der Neon-Platzhalter)
+//   - public/frauen/mareike.jpg ablegen (sonst greift der Neon-Platzhalter)
+//
+// BILDER: liegen in public/frauen/ — eigener Ordner nur fuer diese Seite.
 
 export const ticker = [
   "Klick. Prompt. Done.",
@@ -48,12 +50,13 @@ export const about = {
     {
       tag: "Player 001",
       name: "Insa",
-      role: "Lehrerin · Mathe, Informatik, Religion, GL",
+      role: "Lehrerin · Mathe, Informatik, GL",
+      linkedin: "https://www.linkedin.com/in/insa-riese-303946316/",
       initials: "IR",
       photo: "insa.jpg",
       photoPosition: "60% 16%",
       photoAlt: "Insa Riese, Gründerin von Level Up Ladies",
-      photoLabel: "Foto: insa.jpg",
+      photoLabel: "Foto: public/frauen/insa.jpg",
       paragraphs: [
         "Ich bin Insa. Hauptberuflich unterrichte ich an einer Gesamtschule in NRW, daneben bringe ich Erwachsenen bei, wie sie mit KI arbeiten — statt sie nur auszuprobieren.",
         "Ich sehe überall dasselbe Muster: Frauen, die KI längst nutzen könnten, sich aber nicht rantrauen. Oder sie nutzen, ohne je über den ersten Chat hinauszukommen. Genau da setzen wir an.",
@@ -63,18 +66,18 @@ export const about = {
     {
       tag: "Player 002",
       name: "Mareike",
-      // TODO: Angaben zu Mareike ersetzen, sobald sie vorliegen.
-      role: "Rolle folgt",
-      initials: "M",
+      role: "Karriere-Expertin · Gründerin, Design Your Career",
+      linkedin: "[LinkedIn-Profil von Mareike]",
+      initials: "MK",
       photo: "mareike.jpg",
-      photoPosition: "50% 20%",
-      photoAlt: "Mareike, Workshop-Leiterin bei Level Up Ladies",
-      photoLabel: "Foto: mareike.jpg",
+      photoPosition: "62% 22%",
+      photoAlt: "Mareike Kirch, Expertin für Karriereentwicklung",
+      photoLabel: "Foto: public/frauen/mareike.jpg",
       paragraphs: [
-        "Platzhalter — hier kommt Mareikes Vorstellung hin: was sie beruflich macht, wie sie zu KI gekommen ist, was sie in den Workshop einbringt.",
-        "Zwei kurze Absätze in der Länge der linken Spalte, dann stehen beide Karten optisch sauber nebeneinander.",
+        "Ich bin Mareike. Ich begleite Frauen ab 30 durch den Umbruch: Jobwechsel, Neuausrichtung, KI im Arbeitsalltag. Heute als Gründerin und Geschäftsführerin von Design Your Career, davor als Co-Founderin und CEO von Coding Bootcamps Europe.",
+        "Ich sehe dasselbe Muster wie Insa, nur eine Branche weiter: Es fehlt nicht das Können, es fehlt der Zugang. Wer ihre Werkzeuge beherrscht, verhandelt anders – über ihr Gehalt, ihre Rolle und ihre Zukunft.",
       ],
-      quote: null,
+      quote: "Kein Talent-Problem. Ein Zugangs-Problem.",
     },
   ],
   accent: "Knowledge = Power",
@@ -194,7 +197,7 @@ export const cta = {
   subheading: ["Lass uns den digitalen Gap schließen.", "Gemeinsam. Mit Claude. Ohne Angst."],
   song: "Klick. Prompt. Done. – Das ist dein Glow-up.",
   button: "Jetzt anmelden",
-  note: "Plätze sind limitiert. Der Workshop startet am [DATUM].",
+  note: "Plätze sind limitiert. Der Workshop startet am 12. September 2026 um 10:30 Uhr.",
 };
 
 export const footer = {
@@ -203,11 +206,23 @@ export const footer = {
   linksHeadline: "Backstage",
   links: ["Über Level Up Ladies", "Die Workshop-Season", "Anmeldung", "Kontakt"],
   contactHeadline: "Kontakt",
-  contact: ["Insa Riese", "Mareike", "insariese@gmail.com"],
+  contact: [
+    { label: "Insa Riese", value: "insariese@gmail.com", href: "mailto:insariese@gmail.com" },
+    {
+      label: "Mareike Kirch",
+      value: "mareike.kirch@googlemail.com",
+      href: "mailto:mareike.kirch@googlemail.com",
+    },
+  ],
   socialHeadline: "Social",
-  social: ["Instagram", "LinkedIn"],
+  social: [
+    { label: "LinkedIn Insa", href: "https://www.linkedin.com/in/insa-riese-303946316/" },
+    { label: "LinkedIn Mareike", href: "[LinkedIn-Profil von Mareike]" },
+  ],
   outro: "Setup gemacht. Masterprompt läuft. Kreativ gestartet.",
   crossLink: { label: "Du bist Lehrerin? → Zur Seite für den Bildungsbereich", to: "" },
+  // Die Impressum-Seite selbst (impressum/) wird in einer parallelen Sitzung gebaut.
+  legal: { label: "Impressum", to: "impressum/" },
   copyright: "© 2026 Level Up Ladies | Von Frauen, für Frauen",
   madeWith: "Made with ❤️ and Claude",
 };

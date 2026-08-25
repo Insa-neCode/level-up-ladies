@@ -1,4 +1,4 @@
-import { footer } from "../data/content.js";
+import { footer } from "../content.js";
 
 /**
  * Noch ohne Links: Die Eintraege stehen als Text da, bis die Ziele feststehen.
@@ -37,13 +37,13 @@ export default function Footer() {
             <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.3em] text-magenta">
               {footer.contactHeadline}
             </p>
-            <ul className="mt-4 space-y-3">
+            <ul className="mt-4 space-y-2.5">
               {footer.contact.map((item) => (
                 <li key={item.label} className="text-sm text-white/75">
                   <span className="block">{item.label}</span>
                   <a
                     href={item.href}
-                    className="text-magenta transition-colors hover:text-magenta-soft hover:glow-text"
+                    className="text-magenta transition-colors hover:text-magenta-soft"
                   >
                     {item.value}
                   </a>
@@ -74,17 +74,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-
-            {footer.legal && (
-              <p className="mt-6">
-                <a
-                  href={`${import.meta.env.BASE_URL}${footer.legal.to}`}
-                  className="font-mono text-[10px] uppercase tracking-[0.24em] text-magenta transition-colors hover:text-magenta-soft"
-                >
-                  {footer.legal.label}
-                </a>
-              </p>
-            )}
           </div>
         </div>
 
@@ -105,7 +94,17 @@ export default function Footer() {
 
         <div className="mt-8 flex flex-col gap-2 border-t border-hair pt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-faint sm:flex-row sm:items-center sm:justify-between">
           <p>{footer.copyright}</p>
-          <p>{footer.madeWith}</p>
+          <div className="flex items-center gap-5">
+            {footer.legal && (
+              <a
+                href={`${import.meta.env.BASE_URL}${footer.legal.to}`}
+                className="uppercase tracking-[0.2em] text-white/75 underline-offset-4 transition-colors duration-300 hover:text-magenta hover:underline"
+              >
+                {footer.legal.label}
+              </a>
+            )}
+            <p>{footer.madeWith}</p>
+          </div>
         </div>
       </div>
     </footer>

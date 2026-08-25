@@ -2,7 +2,7 @@ import SectionHeading from "./SectionHeading.jsx";
 import Marker from "./Marker.jsx";
 import Sticker from "./Sticker.jsx";
 import Tape from "./Tape.jsx";
-import { series } from "../data/content.js";
+import { series } from "../content.js";
 
 export default function SeriesTeaser() {
   return (

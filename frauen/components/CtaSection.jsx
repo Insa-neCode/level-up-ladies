@@ -1,5 +1,5 @@
 import Button from "./Button.jsx";
-import { cta } from "../data/content.js";
+import { cta } from "../content.js";
 
 export default function CtaSection() {
   return (

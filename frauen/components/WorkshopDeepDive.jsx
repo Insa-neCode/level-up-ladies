@@ -3,7 +3,7 @@ import Button from "./Button.jsx";
 import Marker from "./Marker.jsx";
 import Tape from "./Tape.jsx";
 import Sticker from "./Sticker.jsx";
-import { workshop } from "../data/content.js";
+import { workshop } from "../content.js";
 
 export default function WorkshopDeepDive() {
   return (

@@ -5,15 +5,18 @@ React + Vite + Tailwind CSS v4. Dark Theme, Neon-Pink Akzente, Struktur exakt na
 
 ## Zwei Landingpages, ein Projekt
 
-| Seite | URL | Zielgruppe | Wo liegt sie? |
-|---|---|---|---|
-| 1 | `/` | Frauen im Bildungsbereich (Lehrerinnen) | `index.html` + `src/` |
-| 2 | `/frauen/` | Alle Frauen — Einsteigerinnen und alle, die KI systematisch nutzen wollen | **`frauen/`** (eigener Ordner, mit eigener README) |
+| Seite | URL | Zielgruppe | Wo liegt sie? | Bilder |
+|---|---|---|---|---|
+| 1 | `/` | Frauen im Bildungsbereich (Lehrerinnen) | `index.html` + `src/` | `public/` |
+| 2 | `/frauen/` | Alle Frauen — Einsteigerinnen und alle, die KI systematisch nutzen wollen | **`frauen/`** (vollstaendig, mit eigener README) | `public/frauen/` |
 
-Beide Seiten benutzen **dieselben Komponenten und dasselbe Design** aus `src/`.
-Unterschieden wird nur ueber den Content, der per Context hereingereicht wird
-(`src/data/ContentContext.jsx`), und ueber die Ueber-Sektion, die `App.jsx` als Prop
-bekommt. Eine Design-Aenderung wirkt damit automatisch auf beiden Seiten.
+**Die beiden Seiten teilen sich keine Datei.** Der Ordner `frauen/` enthaelt eigene
+Kopien von Komponenten, Design-Tokens und Bildern. Wer nur an Seite 2 arbeitet, findet
+dort alles und kann Seite 1 nicht versehentlich veraendern — und umgekehrt.
+
+Der Preis dieser Trennung: **eine Design-Aenderung, die auf beiden Seiten ankommen soll,
+muss zweimal gemacht werden** — einmal in `src/`, einmal in `frauen/`. Das gilt auch fuer
+`index.css` und fuer ausgetauschte Fotos.
 
 Die Fussleisten verlinken wechselseitig aufeinander (`footer.crossLink` im jeweiligen Content).
 
@@ -49,11 +52,14 @@ bzw. **`frauen/content.js`** (Seite 2) — nicht in den Komponenten. Noch zu ers
 
 | Stelle | Datei | Status |
 |---|---|---|
-| Hero-Porträt | `public/hero-portrait.png` | liegt bereits da — aus der Titelfolie der Präsentation freigestellt |
-| Über mich / Wer sind wir | `public/insa.jpg` | liegt bereits da |
-| Wer sind wir (Seite 2) | `public/mareike.jpg` | **noch abzulegen**: Mareikes Foto als `mareike.jpg` in `public/` speichern, dann erscheint es automatisch. Fehlt die Datei, zeigt die Karte den Neon-Platzhalter. |
+| Hero-Porträt Seite 1 | `public/hero-portrait.png` | liegt bereits da — aus der Titelfolie der Präsentation freigestellt |
+| Über mich, Seite 1 | `public/insa.jpg` | liegt bereits da |
+| Hero-Porträt Seite 2 | `public/frauen/hero-portrait.png` | Kopie, liegt bereits da |
+| Wer sind wir, Insa | `public/frauen/insa.jpg` | Kopie, liegt bereits da |
+| Wer sind wir, Mareike | `public/frauen/mareike.jpg` | **noch abzulegen**. Fehlt die Datei, zeigt die Karte den Neon-Platzhalter. |
 
-Beide Seiten teilen sich den Ordner `public/` — ein Bild dort ist von beiden aus erreichbar.
+Jede Seite hat ihren eigenen Bildordner. Ein Foto, das auf beiden Seiten vorkommt, liegt
+deshalb doppelt — beim Austauschen beide Kopien ersetzen.
 
 Der Bildausschnitt für `insa.jpg` sitzt auf `object-[60%_16%]` (Gesicht oben rechts).
 Passt der Ausschnitt nicht, den Wert in `src/components/About.jsx` anpassen. Auf Seite 2
@@ -62,38 +68,42 @@ steuert `photoPosition` je Person in `frauen/content.js` den Ausschnitt.
 ## Struktur
 
 ```
-index.html                    Einstieg Seite 1  (/)
-
-frauen/                       ── ALLES ZUR ZWEITEN LANDINGPAGE ──
-  README.md                   was hier liegt, was noch offen ist
-  index.html                  Einstieg Seite 2  (/frauen/)
-  main.jsx                    mountet App mit dem Content aus diesem Ordner
-  content.js                  saemtliche Inhalte Seite 2
-  AboutTeam.jsx               "Wer sind wir?" — zwei Personen (nur Seite 2)
-
-src/                          ── GEMEINSAM FUER BEIDE SEITEN ──
-  main.jsx                    Einstieg Seite 1
-  App.jsx                     Sektions-Reihenfolge; Ueber-Sektion kommt als Prop
+index.html                    ── SEITE 1  (/) ──
+src/
+  main.jsx                    Einstieg
+  App.jsx                     Sektions-Reihenfolge
   index.css                   Design-Tokens (Farben, Font, Reveal-Animation)
-  data/ContentContext.jsx     reicht den Content an die Komponenten durch
-  data/content.js             Inhalte Seite 1 (Bildungsbereich)
+  data/content.js             saemtliche Inhalte Seite 1
   hooks/useReveal.js          Fade-in beim Scrollen
   components/
     Hero.jsx                  1. Hero (Dark, 100vh Desktop)
     HeroGraphic.jsx           Abstract Neon Graphic
-    About.jsx                 2. "Wer bin ich?" — eine Person (Seite 1)
-    WorkshopDeepDive.jsx      3. Workshop 1 (3 Cards + optional "Für wen?" + Outcomes + Details)
+    About.jsx                 2. "Wer bin ich?" — eine Person
+    Ticker.jsx                Laufband
+    WorkshopDeepDive.jsx      3. Workshop 1 (Cards + Outcomes + Details)
     SeriesTeaser.jsx          4. Workshop-Serie (Dark)
     CtaSection.jsx            5. CTA (Neon Pink)
     Footer.jsx                6. Footer (Charcoal, optional Querverweis)
     Button.jsx                Primary / Secondary / Ghost
     SectionHeading.jsx        H2 Bold Italic + Neon-Klammer
+    Marker.jsx Sticker.jsx Tape.jsx   Deko-Elemente
 
-public/                       Bilder, von beiden Seiten aus erreichbar
+frauen/                       ── SEITE 2  (/frauen/) — eigenstaendig ──
+  README.md                   was hier liegt, was noch offen ist
+  index.html                  Einstieg
+  main.jsx  App.jsx           wie oben, eigene Kopien
+  content.js                  saemtliche Inhalte Seite 2
+  index.css                   eigene Kopie der Design-Tokens
+  hooks/  components/         eigene Kopien; statt About.jsx: AboutTeam.jsx
+                              ("Wer sind wir?", zwei Personen)
+
+public/                       Bilder Seite 1
+public/frauen/                Bilder Seite 2
 ```
 
-Der Block **"Für wen ist das?"** in `WorkshopDeepDive.jsx` erscheint nur, wenn im Content
-`workshop.audience` gesetzt ist — auf Seite 1 fehlt der Schluessel, dort bleibt der Block aus.
+Der Block **"Für wen ist das?"** steckt in `frauen/components/WorkshopDeepDive.jsx` und
+erscheint, weil `workshop.audience` in `frauen/content.js` gesetzt ist. Die Fassung von
+Seite 1 kennt den Block nicht.
 
 ## Deployment auf GitHub Pages
 
