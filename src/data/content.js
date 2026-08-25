@@ -31,47 +31,20 @@ export const hero = {
   portraitAlt: "Porträt einer Frau in Schwarz-Weiß mit Neon-Pink Akzenten",
 };
 
+// Den Workshop fuer den Bildungsbereich gibt Insa allein.
+// Diese Sektion bleibt einpersonig — Mareike gehoert ausschliesslich
+// zur Seite fuer alle Frauen unter frauen/content.js.
 export const about = {
-  kicker: "The Founders",
-  headline: "Wer sind wir?",
-  intro:
-    "Zwei Frauen, ein Ziel: KI raus aus der Buzzword-Blase und rein in deinen Schulalltag. Wir halten die Workshops zu zweit — mit zwei Perspektiven, zwei Arbeitsweisen und einer Haltung: Das Problem ist nie die Technologie. Es ist der Zugang.",
-  people: [
-    {
-      tag: "Player 001",
-      name: "Insa",
-      role: "Lehrerin · Mathe, Informatik, GL",
-      initials: "IR",
-      photo: "insa.jpg",
-      photoPosition: "60% 16%",
-      photoAlt: "Insa Riese, Gründerin von Level Up Ladies",
-      photoLabel: "Foto: public/insa.jpg",
-      linkedin: "https://www.linkedin.com/in/insa-riese-303946316/",
-      paragraphs: [
-        "Ich bin Insa. Lehrerin für Mathe, Informatik und GL an einer Gesamtschule in NRW. Ich sehe jeden Tag: Viele Lehrerinnen haben Angst vor KI oder kennen sie gar nicht. Das Problem ist nicht die Technologie – es ist der Zugang.",
-        "Deshalb mache ich Level Up Ladies: Um zu zeigen, dass KI ein Werkzeug ist, das du für dich nutzen kannst. Einmal richtig eingerichtet – und es arbeitet für dich.",
-      ],
-      quote: "Ohne Angst. Ohne Zauberei. Ohne die ganzen Buzzwords.",
-    },
-    {
-      tag: "Player 002",
-      name: "Mareike",
-      role: "Karriere-Expertin · Gründerin, Design Your Career",
-      initials: "MK",
-      photo: "mareike.jpg",
-      photoPosition: "62% 22%",
-      photoAlt: "Mareike Kirch, Expertin für Karriereentwicklung",
-      photoLabel: "Foto: public/mareike.jpg",
-      linkedin: "https://www.linkedin.com/in/mareikekirch/",
-      paragraphs: [
-        "Ich bin Mareike. Ich begleite Frauen ab 30 durch den Umbruch: Jobwechsel, Neuausrichtung, KI im Arbeitsalltag. Heute als Gründerin und Geschäftsführerin von Design Your Career, davor als Co-Founderin und CEO von Coding Bootcamps Europe.",
-        "In der Beratung sehe ich es täglich: Es fehlt nicht das Können, es fehlt der Zugang. Wer ihre Werkzeuge beherrscht, verhandelt anders – über ihre Zeit, ihre Rolle und ihre Zukunft.",
-      ],
-      quote: "Kein Talent-Problem. Ein Zugangs-Problem.",
-    },
+  kicker: "Player 001",
+  headline: "Wer bin ich?",
+  paragraphs: [
+    "Ich bin Insa. Lehrerin für Mathe, Informatik und GL an einer Gesamtschule in NRW. Ich sehe jeden Tag: Viele Lehrerinnen haben Angst vor KI oder kennen sie gar nicht. Das Problem ist nicht die Technologie – es ist der Zugang.",
+    "Deshalb mache ich Level Up Ladies: Um zu zeigen, dass KI ein Werkzeug ist, das du für dich nutzen kannst. Einmal richtig eingerichtet – und es arbeitet für dich. Ohne Angst. Ohne Zauberei. Ohne die ganzen Buzzwords.",
   ],
   accent: "Knowledge = Power",
   scribble: "Nicht warten, bis man uns fragt",
+  photoAlt: "Insa Riese, Lehrerin und Gründerin von Level Up Ladies",
+  photoLabel: "Foto: public/insa.jpg",
   closing: "Nicht warten, bis man uns fragt. Wir machen das einfach selbst.",
 };
 
@@ -180,7 +153,6 @@ export const footer = {
   socialHeadline: "Social",
   social: [
     { label: "LinkedIn Insa", href: "https://www.linkedin.com/in/insa-riese-303946316/" },
-    { label: "LinkedIn Mareike", href: "https://www.linkedin.com/in/mareikekirch/" },
   ],
   legal: [
     { label: "Impressum", to: "impressum/" },
@@ -208,7 +180,7 @@ const mailFallback =
   "mailto:" +
   signup.mailTo +
   "?subject=Anmeldung%3A%20Level%20Up%2C%20Ladies%21%20am%2012.09.2026" +
-  "&body=Hallo%20Insa%20und%20Mareike%2C%0D%0A%0D%0A" +
+  "&body=Hallo%20Insa%2C%0D%0A%0D%0A" +
   "ich%20moechte%20mir%20einen%20Platz%20im%20Workshop%20am%2012.%20September%202026%20um%2010%3A30%20Uhr%20sichern.%0D%0A%0D%0A" +
   "Name%3A%0D%0ASchule%20%2F%20Fach%3A%0D%0A%0D%0AViele%20Gruesse";
 

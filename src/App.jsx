@@ -1,6 +1,6 @@
 import Hero from "./components/Hero.jsx";
 import Ticker from "./components/Ticker.jsx";
-import AboutTeam from "./components/AboutTeam.jsx";
+import About from "./components/About.jsx";
 import WorkshopDeepDive from "./components/WorkshopDeepDive.jsx";
 import SeriesTeaser from "./components/SeriesTeaser.jsx";
 import CtaSection from "./components/CtaSection.jsx";
@@ -16,7 +16,7 @@ export default function App() {
         <Ticker />
         <Hero />
         <Ticker tone="light" reverse />
-        <AboutTeam />
+        <About />
         <Ticker />
         <WorkshopDeepDive />
         <SeriesTeaser />
