@@ -1,0 +1,86 @@
+import { useContent } from "../data/ContentContext.jsx";
+
+/**
+ * Noch ohne Links: Die Eintraege stehen als Text da, bis die Ziele feststehen.
+ */
+export default function Footer() {
+  const { footer } = useContent();
+  return (
+    <footer className="relative overflow-hidden bg-ink pt-16 pb-10">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-32 left-1/2 h-[380px] w-[680px] -translate-x-1/2 rounded-full bg-magenta/12 blur-[130px]"
+      />
+
+      <div className="relative mx-auto max-w-6xl px-5 md:px-10">
+        <p className="reveal font-display text-[34px] leading-[0.95] font-black italic text-white glow-text-white md:text-[52px]">
+          {footer.brand}
+        </p>
+        <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.28em] text-magenta glow-text">
+          {footer.tagline}
+        </p>
+
+        <div className="mt-12 grid grid-cols-1 gap-10 border-t border-hair pt-10 sm:grid-cols-3">
+          <div>
+            <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.3em] text-magenta">
+              {footer.linksHeadline}
+            </p>
+            <ul className="mt-4 space-y-2.5">
+              {footer.links.map((item) => (
+                <li key={item} className="text-sm text-white/75">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.3em] text-magenta">
+              {footer.contactHeadline}
+            </p>
+            <ul className="mt-4 space-y-2.5">
+              {footer.contact.map((item) => (
+                <li key={item} className="text-sm text-white/75">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.3em] text-magenta">
+              {footer.socialHeadline}
+            </p>
+            <ul className="mt-4 space-y-2.5">
+              {footer.social.map((item) => (
+                <li key={item} className="text-sm text-white/75">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Querverweis auf die jeweils andere Landingpage */}
+        {footer.crossLink && (
+          <a
+            href={`${import.meta.env.BASE_URL}${footer.crossLink.to}`}
+            className="mt-10 inline-flex items-center gap-3 border border-magenta/50 px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-magenta transition-colors duration-300 hover:bg-magenta hover:text-white"
+          >
+            {footer.crossLink.label}
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        )}
+
+        <p className="mt-12 font-marker text-2xl text-magenta glow-text md:text-3xl">
+          {footer.outro}
+        </p>
+
+        <div className="mt-8 flex flex-col gap-2 border-t border-hair pt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-faint sm:flex-row sm:items-center sm:justify-between">
+          <p>{footer.copyright}</p>
+          <p>{footer.madeWith}</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
