@@ -1,5 +1,7 @@
-// Impressum-Inhalte. Alles in [eckigen Klammern] muss noch ersetzt werden —
-// eine vollstaendige Anschrift ist nach § 5 DDG Pflicht, ein Postfach genuegt nicht.
+// Impressum-Inhalte.
+// Eine Telefonnummer ist nicht zwingend, solange eine schnelle elektronische
+// Kontaktaufnahme moeglich ist (E-Mail). Falls doch gewuenscht, hier wieder
+// eine Zeile { label: "Telefon", value: "...", href: "tel:..." } ergaenzen.
 
 export const impressum = {
   kicker: "Legal",
@@ -11,13 +13,13 @@ export const impressum = {
     {
       name: "Insa Riese",
       rolle: "Level Up, Ladies! — Bildungsbereich",
-      adresse: ["[Straße und Hausnummer]", "[PLZ] [Ort]", "Deutschland"],
+      adresse: ["Am Alten Güterbahnhof 31", "50825 Köln", "Deutschland"],
       mail: "insariese@gmail.com",
     },
     {
       name: "Mareike Kirch",
       rolle: "Level Up, Ladies! — Job, Business und Alltag",
-      adresse: ["[Straße und Hausnummer]", "[PLZ] [Ort]", "Deutschland"],
+      adresse: ["Am Alten Güterbahnhof 31", "50825 Köln", "Deutschland"],
       mail: "mareike.kirch@googlemail.com",
     },
   ],
@@ -30,7 +32,6 @@ export const impressum = {
       value: "mareike.kirch@googlemail.com",
       href: "mailto:mareike.kirch@googlemail.com",
     },
-    { label: "Telefon", value: "[Telefonnummer]", href: null },
   ],
 
   verantwortlichHeadline: "Verantwortlich für den Inhalt",
