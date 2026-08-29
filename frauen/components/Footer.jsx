@@ -26,8 +26,14 @@ export default function Footer() {
             </p>
             <ul className="mt-4 space-y-2.5">
               {footer.links.map((item) => (
-                <li key={item} className="text-sm text-white/75">
-                  {item}
+                <li key={item.label} className="text-sm text-white/75">
+                  {item.to ? (
+                    <a href={item.to} className="transition-colors hover:text-magenta">
+                      {item.label}
+                    </a>
+                  ) : (
+                    <span className="text-white/45">{item.label} (Link folgt)</span>
+                  )}
                 </li>
               ))}
             </ul>

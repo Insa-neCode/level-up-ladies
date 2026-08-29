@@ -69,8 +69,12 @@ Level in den Betreff. Sobald das Formular steht, genügt ein Eintrag in
       Workspace nutzen oder später auf Tally wechseln (Belgien, Server Frankfurt, AV-Vertrag).
 
 ### 2.2 Restliche Links
-**Was:** Im Footer stehen „Über Level Up Ladies", „Die Workshop-Season", „Anmeldung", „Kontakt" noch als reiner Text. Instagram fehlt als Kanal.
-**Wo:** `src/data/content.js` und `frauen/content.js`, jeweils `footer.links` / `footer.social`.
+**Stand:** Die Footer-Liste „Backstage" ist entschlackt. „Anmeldung" und „Kontakt" sind
+raus — der Anmelde-Button steht ohnehin darüber, der Kontaktblock direkt daneben.
+Die verbliebenen zwei Einträge springen jetzt zu den passenden Abschnitten.
+**Wo:** `footer.links` in `src/data/content.js`, `frauen/content.js` und `quiz/content.js`.
+
+- [ ] Instagram fehlt noch als Kanal in `footer.social`
 
 ---
 
@@ -90,6 +94,17 @@ keine Quellenzeile.
 ### 3.3 Weitere Termine
 **Was:** Aktuell ist ein Termin hinterlegt: 12. September 2026, 10:30 Uhr.
 **Wo:** `cta.note` in beiden Content-Dateien.
+
+### 3.4 Seite „Über Level Up Ladies"
+**Was:** Eine eigene Seite zur Philosophie hinter Level Up Ladies — warum es das Angebot
+gibt, woran ihr glaubt, was ihr mit „Wir schließen den digitalen Gap" meint. Der
+Footer-Eintrag „Über Level Up Ladies" soll später dorthin führen.
+**Stand:** Inhalt noch nicht erarbeitet. Bis dahin springt der Link auf den Über-Bereich
+der jeweiligen Seite: `#ueber-mich` im Bildungsbereich, `#ueber-uns` bei den Frauen.
+**Wo:** `footer.links` in beiden Content-Dateien, sobald die Seite steht auf den neuen Pfad zeigen.
+**Fehlt noch:**
+- [ ] Text zur Philosophie schreiben
+- [ ] Entscheiden, ob eine Seite für beide Zielgruppen reicht oder zwei Fassungen nötig sind
 
 ---
 

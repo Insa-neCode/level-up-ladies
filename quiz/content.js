@@ -353,7 +353,10 @@ export const footer = {
   brand: "Level Up, Ladies!",
   tagline: "KI-Power für Frauen — in Job, Business und Alltag",
   linksHeadline: "Backstage",
-  links: ["Der Level-Check", "Die Workshop-Season", "Anmeldung", "Kontakt"],
+  links: [
+    { label: "Der Level-Check", to: "#test" },
+    { label: "Die Workshop-Season", to: "../#serie" },
+  ],
   contactHeadline: "Kontakt",
   contact: [kontaktEintrag],
   socialHeadline: "Social",

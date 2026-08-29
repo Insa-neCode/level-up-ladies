@@ -207,7 +207,12 @@ export const footer = {
   brand: "Level Up, Ladies!",
   tagline: "KI-Power für Frauen — in Job, Business und Alltag",
   linksHeadline: "Backstage",
-  links: ["Über Level Up Ladies", "Die Workshop-Season", "Anmeldung", "Kontakt"],
+  // "Über Level Up Ladies" zeigt vorerst auf den Über-uns-Bereich dieser Seite.
+  // Geplant ist eine eigene Seite zur Philosophie hinter Level Up Ladies (ROADMAP 3.4).
+  links: [
+    { label: "Über Level Up Ladies", to: "#ueber-uns" },
+    { label: "Die Workshop-Season", to: "#serie" },
+  ],
   contactHeadline: "Kontakt",
   contact: [kontaktEintrag],
   socialHeadline: "Social",
