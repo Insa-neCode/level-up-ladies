@@ -11,6 +11,10 @@
 // BILDER: liegen in public/frauen/ — eigener Ordner nur fuer diese Seite.
 import { kontaktEintrag, kontaktMail } from "../shared/kontakt.js";
 
+// Google-Formular fuer alle Anmeldungen — Buttons wie Footer greifen darauf zu.
+const GOOGLE_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSewJBJ9aKOCzzsMVyLf5RTiJwdLGbUws9mINSYqgWMp_XOcuw/viewform";
+
 export const ticker = [
   "Klick. Prompt. Done.",
   "Das ist dein Glow-up",
@@ -212,6 +216,7 @@ export const footer = {
   links: [
     { label: "Über Level Up Ladies", to: "#ueber-uns" },
     { label: "Die Workshop-Season", to: "#serie" },
+    { label: "Anmeldung", to: GOOGLE_FORM_URL },
   ],
   contactHeadline: "Kontakt",
   contact: [kontaktEintrag],
@@ -237,8 +242,7 @@ export const footer = {
 // Solange das Feld leer ist, oeffnen die Buttons eine vorbereitete E-Mail —
 // die Seite funktioniert also in jedem Fall.
 export const signup = {
-  googleFormUrl:
-    "https://docs.google.com/forms/d/e/1FAIpQLSewJBJ9aKOCzzsMVyLf5RTiJwdLGbUws9mINSYqgWMp_XOcuw/viewform",
+  googleFormUrl: GOOGLE_FORM_URL,
   mailTo: kontaktMail,
 };
 

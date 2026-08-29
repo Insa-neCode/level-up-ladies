@@ -28,7 +28,12 @@ export default function Footer() {
               {footer.links.map((item) => (
                 <li key={item.label} className="text-sm text-white/75">
                   {item.to ? (
-                    <a href={item.to} className="transition-colors hover:text-magenta">
+                    <a
+                      href={item.to}
+                      target={item.to.startsWith("http") ? "_blank" : undefined}
+                      rel={item.to.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="transition-colors hover:text-magenta"
+                    >
                       {item.label}
                     </a>
                   ) : (

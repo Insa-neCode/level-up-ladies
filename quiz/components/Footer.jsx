@@ -28,7 +28,12 @@ export default function Footer() {
               {footer.links.map((item) => (
                 <li key={item.label} className="text-sm text-white/75">
                   {item.to ? (
-                    <a href={item.to} className="transition-colors hover:text-magenta">
+                    <a
+                      href={item.to}
+                      target={item.to.startsWith("http") ? "_blank" : undefined}
+                      rel={item.to.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="transition-colors hover:text-magenta"
+                    >
                       {item.label}
                     </a>
                   ) : (
@@ -118,14 +123,15 @@ export default function Footer() {
         <div className="mt-8 flex flex-col gap-2 border-t border-hair pt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-faint sm:flex-row sm:items-center sm:justify-between">
           <p>{footer.copyright}</p>
           <div className="flex items-center gap-5">
-            {footer.legal && (
+            {footer.legal?.map((eintrag) => (
               <a
-                href={`${import.meta.env.BASE_URL}${footer.legal.to}`}
+                key={eintrag.to}
+                href={`${import.meta.env.BASE_URL}${eintrag.to}`}
                 className="uppercase tracking-[0.2em] text-white/75 underline-offset-4 transition-colors duration-300 hover:text-magenta hover:underline"
               >
-                {footer.legal.label}
+                {eintrag.label}
               </a>
-            )}
+            ))}
             <p>{footer.madeWith}</p>
           </div>
         </div>

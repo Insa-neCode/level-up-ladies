@@ -14,6 +14,10 @@ import { kontaktEintrag } from "../shared/kontakt.js";
 // gespeichert und nichts an einen Server geschickt — deshalb braucht diese Seite
 // heute keine Einwilligung.
 
+// Google-Formular fuer alle Anmeldungen — Buttons wie Footer greifen darauf zu.
+const GOOGLE_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSewJBJ9aKOCzzsMVyLf5RTiJwdLGbUws9mINSYqgWMp_XOcuw/viewform";
+
 export const ticker = [
   "Klick. Prompt. Done.",
   "Der Level-Check",
@@ -356,6 +360,7 @@ export const footer = {
   links: [
     { label: "Der Level-Check", to: "#test" },
     { label: "Die Workshop-Season", to: "../#serie" },
+    { label: "Anmeldung", to: GOOGLE_FORM_URL },
   ],
   contactHeadline: "Kontakt",
   contact: [kontaktEintrag],
@@ -366,15 +371,24 @@ export const footer = {
   ],
   outro: "Nicht warten, bis man uns fragt.",
   crossLink: { label: "Zur Workshop-Seite für Job, Business und Alltag", to: "frauen/" },
-  legal: { label: "Impressum", to: "impressum/" },
+  legal: [
+    { label: "Impressum", to: "impressum/" },
+    { label: "Datenschutz", to: "datenschutz/" },
+  ],
   copyright: "© 2026 Level Up Ladies | Von Frauen, für Frauen",
   madeWith: "Made with ❤️ and Claude",
 };
 
-// Anmeldung: wie auf den anderen Seiten eine vorbereitete E-Mail. Das Ergebnis
-// des Tests wandert in Betreff und Text — so seht ihr direkt, wer auf welchem
-// Level anfragt, ganz ohne Formular, Server und Einwilligung.
+// Anmeldung: fuehrt zum Google-Formular, wie auf den anderen Seiten.
+// Ist googleFormUrl leer, faellt die Funktion auf eine vorbereitete E-Mail
+// zurueck — dort landet dann zusaetzlich das Testergebnis in Betreff und Text.
+export const signup = {
+  googleFormUrl: GOOGLE_FORM_URL,
+};
+
 export function signupHref(levelTitle) {
+  if (signup.googleFormUrl) return signup.googleFormUrl;
+
   const level = levelTitle ? encodeURIComponent(levelTitle) : null;
 
   const subject = level
