@@ -6,9 +6,11 @@ import SeriesTeaser from "./components/SeriesTeaser.jsx";
 import CtaSection from "./components/CtaSection.jsx";
 import Footer from "./components/Footer.jsx";
 import { useReveal } from "./hooks/useReveal.js";
+import { useHashScroll } from "../shared/useHashScroll.js";
 
 export default function App() {
   useReveal();
+  useHashScroll();
 
   return (
     <>

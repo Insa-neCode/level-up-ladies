@@ -6,6 +6,7 @@ import SeriesTeaser from "./components/SeriesTeaser.jsx";
 import CtaSection from "./components/CtaSection.jsx";
 import Footer from "./components/Footer.jsx";
 import { useReveal } from "./hooks/useReveal.js";
+import { useHashScroll } from "../shared/useHashScroll.js";
 
 /**
  * Sektions-Reihenfolge der zweiten Landingpage (/frauen/).
@@ -13,6 +14,7 @@ import { useReveal } from "./hooks/useReveal.js";
  */
 export default function App() {
   useReveal();
+  useHashScroll();
 
   return (
     <>

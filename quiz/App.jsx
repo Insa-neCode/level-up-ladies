@@ -5,6 +5,7 @@ import Quiz from "./components/Quiz.jsx";
 import CtaSection from "./components/CtaSection.jsx";
 import Footer from "./components/Footer.jsx";
 import { useReveal } from "./hooks/useReveal.js";
+import { useHashScroll } from "../shared/useHashScroll.js";
 
 /**
  * Sektions-Reihenfolge des Leadmagneten (/quiz/):
@@ -13,6 +14,7 @@ import { useReveal } from "./hooks/useReveal.js";
  */
 export default function App() {
   useReveal();
+  useHashScroll();
 
   return (
     <>
