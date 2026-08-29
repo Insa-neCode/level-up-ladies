@@ -386,8 +386,47 @@ export const signup = {
   googleFormUrl: GOOGLE_FORM_URL,
 };
 
+// Vorausgefuellte Felder im Google-Formular. Google nimmt sie als Query-Parameter
+// entgegen ("Link zum Vorausfuellen abrufen" erzeugt genau diese Form).
+//
+//   quizGemacht -> die Ja/Nein-Frage "Hast du unser Quiz gemacht?"
+//   level       -> das Kurzantwort-Feld "Wenn du magst, verrate uns dein Level"
+//                  im Abschnitt "KI Level"
+//
+// Passt ein Wert zu keiner Antwortoption, laesst Google das Feld einfach leer.
+// Ein falscher Eintrag hier kann das Formular also nicht kaputtmachen.
+//
+// Die IDs ueberleben ein Umbenennen der Frage im Formular — nur das Loeschen und
+// Neuanlegen eines Feldes vergibt eine neue. Kommt das Level in den Antworten
+// nicht an, sind diese beiden IDs als Erstes zu pruefen; sie stehen nur hier.
+const FORM_FELDER = {
+  quizGemacht: { id: "entry.1471499679", wert: "Ja" },
+  level: { id: "entry.418786928" },
+};
+
+/**
+ * Nur Anmeldungen von der Ergebnisseite bekommen die Vorausfuellung — dort ist
+ * belegt, dass der Test wirklich gemacht wurde. Der Button im unteren CTA-Block
+ * steht vor dem Test und fuehrt deshalb auf das leere Formular.
+ */
+function formularMitErgebnis(levelTitle) {
+  const p = new URLSearchParams({ usp: "pp_url" });
+
+  if (FORM_FELDER.quizGemacht) {
+    p.set(FORM_FELDER.quizGemacht.id, FORM_FELDER.quizGemacht.wert);
+  }
+  if (FORM_FELDER.level) {
+    p.set(FORM_FELDER.level.id, levelTitle);
+  }
+
+  const trenner = signup.googleFormUrl.includes("?") ? "&" : "?";
+  return `${signup.googleFormUrl}${trenner}${p.toString()}`;
+}
+
 export function signupHref(levelTitle) {
-  if (signup.googleFormUrl) return signup.googleFormUrl;
+  if (signup.googleFormUrl) {
+    return levelTitle ? formularMitErgebnis(levelTitle) : signup.googleFormUrl;
+  }
 
   const level = levelTitle ? encodeURIComponent(levelTitle) : null;
 
