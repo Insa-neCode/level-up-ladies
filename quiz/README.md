@@ -13,8 +13,8 @@ Der Test misst **zwei Werte statt einem**:
 
 | Achse | Fragen | Was sie misst |
 |---|---|---|
-| **Praxis** | 01–06 | Was jemand heute tatsächlich mit KI macht |
-| **Zutrauen** | 07–10 | Was sie sich dabei selbst zutraut |
+| **Praxis** | 01–05 | Was jemand heute tatsächlich mit KI macht |
+| **Zutrauen** | 06–10 | Was sie sich dabei selbst zutraut |
 
 Der Abstand zwischen beiden ist der **Gap** — und damit genau der Punkt, um den es bei
 Level Up Ladies geht. Wer in der Praxis deutlich weiter ist als im Zutrauen, bekommt den

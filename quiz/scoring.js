@@ -4,8 +4,8 @@ import { questions, results, gapReadout } from "./content.js";
  * Auswertung des Level-Checks — reine Rechnung, kein React, kein Speichern.
  *
  * Zwei Achsen:
- *   praxis = was jemand tatsaechlich mit KI macht  (Fragen 01-06)
- *   mut    = was sie sich dabei selbst zutraut     (Fragen 07-10)
+ *   praxis = was jemand tatsaechlich mit KI macht  (Fragen 01-05)
+ *   mut    = was sie sich dabei selbst zutraut     (Fragen 06-10)
  *
  * Der Abstand zwischen beiden ist der Punkt der ganzen Sache: Wer in der Praxis
  * deutlich weiter ist als im Zutrauen, hat kein Koennens-Problem.
