@@ -25,7 +25,7 @@ Auf [forms.google.com](https://forms.google.com) ein leeres Formular starten.
 
 > Ich bin damit einverstanden, dass meine Angaben zur Organisation des Workshops
 > gespeichert und verarbeitet werden. Die Daten werden nicht weitergegeben. Ich kann
-> meine Einwilligung jederzeit per E-Mail an insariese@gmail.com widerrufen.
+> meine Einwilligung jederzeit per E-Mail an insariese[@]gmail.com widerrufen.
 
 In den Einstellungen unter **Antworten** die Option *E-Mail-Adressen erfassen* nur
 aktivieren, wenn ihr sie wirklich braucht — ihr fragt sie ohnehin als Feld ab.
@@ -45,7 +45,7 @@ Diesen Link an zwei Stellen eintragen, jeweils bei `googleFormUrl`:
 ```js
 export const signup = {
   googleFormUrl: "https://forms.gle/xxxxxxxx",
-  mailTo: "insariese@gmail.com",
+  mailTo: "insariese[@]gmail.com",
 };
 ```
 
@@ -76,7 +76,7 @@ function beiAnmeldung() {
   if (anzahl >= MAX_PLAETZE) {
     formular.setAcceptingResponses(false);
     formular.setCustomClosedFormMessage(
-      'Der Workshop ist ausgebucht. Schreib uns an insariese@gmail.com, ' +
+      'Der Workshop ist ausgebucht. Schreib uns an insariese[@]gmail.com, ' +
       'dann setzen wir dich auf die Warteliste für den nächsten Termin.'
     );
   }

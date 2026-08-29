@@ -389,7 +389,12 @@ export function signupHref(levelTitle) {
     "Ich moechte mir einen Platz im Workshop am 12. September 2026 um 10:30 Uhr sichern." +
     "%0D%0A%0D%0AName:%0D%0AWomit%20arbeitest%20du%3F%0D%0A%0D%0AViele Gruesse";
 
-  return `mailto:insariese@gmail.com?subject=${subject}&body=${body}`;
+  // Die Adresse steht bewusst nicht am Stueck im Quelltext, damit
+  // Adress-Sammler sie nicht einfach herauslesen koennen. Erst hier wird
+  // sie zusammengesetzt — der Anmelde-Button funktioniert dadurch normal.
+  const empfaenger = ["insariese", "gmail.com"].join("@");
+
+  return `mailto:${empfaenger}?subject=${subject}&body=${body}`;
 }
 
 // Sobald ein Formular steht (ROADMAP 2.1) und die Datenschutzerklaerung
