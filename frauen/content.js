@@ -9,6 +9,7 @@
 //   - public/frauen/mareike.jpg ablegen (sonst greift der Neon-Platzhalter)
 //
 // BILDER: liegen in public/frauen/ — eigener Ordner nur fuer diese Seite.
+import { kontaktEintrag, kontaktMail } from "../shared/kontakt.js";
 
 export const ticker = [
   "Klick. Prompt. Done.",
@@ -208,14 +209,7 @@ export const footer = {
   linksHeadline: "Backstage",
   links: ["Über Level Up Ladies", "Die Workshop-Season", "Anmeldung", "Kontakt"],
   contactHeadline: "Kontakt",
-  contact: [
-    { label: "Insa Riese", value: "insariese@gmail.com", href: "mailto:insariese@gmail.com" },
-    {
-      label: "Mareike Kirch",
-      value: "mareike.kirch@googlemail.com",
-      href: "mailto:mareike.kirch@googlemail.com",
-    },
-  ],
+  contact: [kontaktEintrag],
   socialHeadline: "Social",
   social: [
     { label: "LinkedIn Insa", href: "https://www.linkedin.com/in/insa-riese-303946316/" },
@@ -240,7 +234,7 @@ export const footer = {
 export const signup = {
   googleFormUrl:
     "https://docs.google.com/forms/d/e/1FAIpQLSewJBJ9aKOCzzsMVyLf5RTiJwdLGbUws9mINSYqgWMp_XOcuw/viewform",
-  mailTo: "insariese@gmail.com",
+  mailTo: kontaktMail,
 };
 
 const mailFallback =

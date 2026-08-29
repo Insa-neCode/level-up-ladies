@@ -41,12 +41,16 @@ export default function Footer() {
               {footer.contact.map((item) => (
                 <li key={item.label} className="text-sm text-white/75">
                   <span className="block">{item.label}</span>
-                  <a
-                    href={item.href}
-                    className="text-magenta transition-colors hover:text-magenta-soft"
-                  >
-                    {item.value}
-                  </a>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      className="text-magenta transition-colors hover:text-magenta-soft"
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <span className="text-white/45">{item.value}</span>
+                  )}
                 </li>
               ))}
             </ul>

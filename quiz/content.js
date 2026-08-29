@@ -1,6 +1,7 @@
 // Inhalte des Leadmagneten "Der Level-Check" (/quiz/).
 // Eigenstaendige Datei — Seite 1 (src/data/content.js) und Seite 2 (frauen/content.js)
 // bleiben davon unberuehrt. Wording, Farben und Schriften folgen /frauen/.
+import { kontaktEintrag } from "../shared/kontakt.js";
 //
 // OFFEN / NOCH ZU PRUEFEN:
 //   - gap.stats  -> Quellenangaben pruefen und in stats[].source eintragen,
@@ -354,14 +355,7 @@ export const footer = {
   linksHeadline: "Backstage",
   links: ["Der Level-Check", "Die Workshop-Season", "Anmeldung", "Kontakt"],
   contactHeadline: "Kontakt",
-  contact: [
-    { label: "Insa Riese", value: "insariese@gmail.com", href: "mailto:insariese@gmail.com" },
-    {
-      label: "Mareike Kirch",
-      value: "mareike.kirch@googlemail.com",
-      href: "mailto:mareike.kirch@googlemail.com",
-    },
-  ],
+  contact: [kontaktEintrag],
   socialHeadline: "Social",
   social: [
     { label: "LinkedIn Insa", href: "https://www.linkedin.com/in/insa-riese-303946316/" },

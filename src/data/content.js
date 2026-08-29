@@ -2,6 +2,7 @@
 // LINKS: bewusst noch keine. Buttons und Footer-Eintraege sind vorerst ohne Ziel.
 // Sobald die Ziele feststehen: hier eine "href"-Angabe ergaenzen, die Komponenten
 // machen daraus automatisch einen Link (siehe Button.jsx).
+import { kontaktEintrag, kontaktMail } from "../../shared/kontakt.js";
 
 export const ticker = [
   "Klick. Prompt. Done.",
@@ -149,7 +150,7 @@ export const footer = {
   linksHeadline: "Backstage",
   links: ["Über Level Up Ladies", "Die Workshop-Season", "Anmeldung", "Kontakt"],
   contactHeadline: "Kontakt",
-  contact: ["Insa Riese", "insariese@gmail.com"],
+  contact: [kontaktEintrag],
   socialHeadline: "Social",
   social: [
     { label: "LinkedIn Insa", href: "https://www.linkedin.com/in/insa-riese-303946316/" },
@@ -173,7 +174,7 @@ export const footer = {
 export const signup = {
   googleFormUrl:
     "https://docs.google.com/forms/d/e/1FAIpQLSewJBJ9aKOCzzsMVyLf5RTiJwdLGbUws9mINSYqgWMp_XOcuw/viewform",
-  mailTo: "insariese@gmail.com",
+  mailTo: kontaktMail,
 };
 
 const mailFallback =
