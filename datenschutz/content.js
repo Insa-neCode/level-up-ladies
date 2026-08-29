@@ -3,6 +3,7 @@
 // Der Abschnitt "Anmeldung zum Workshop" beschreibt Google Forms — er gilt erst,
 // sobald signup.googleFormUrl gesetzt ist. Bis dahin bitte auskommentiert lassen
 // oder den Hinweissatz darin stehen lassen.
+import { kontaktMail, kontaktHinweis } from "../shared/kontakt.js";
 
 export const datenschutz = {
   kicker: "Legal",
@@ -16,7 +17,7 @@ export const datenschutz = {
     "Insa Riese und Mareike Kirch",
     "Am Alten Güterbahnhof 31",
     "50825 Köln",
-    "insariese@gmail.com · mareike.kirch@googlemail.com",
+    kontaktMail || kontaktHinweis,
   ],
 
   abschnitte: [

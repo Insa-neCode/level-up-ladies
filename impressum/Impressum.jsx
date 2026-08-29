@@ -1,4 +1,5 @@
 import { impressum } from "./content.js";
+import { kontaktHinweis } from "../shared/kontakt.js";
 
 /**
  * Rechtsseite im Magazin-Layout: ruhiger als die Landingpages,
@@ -47,12 +48,16 @@ export default function Impressum() {
                     {zeile}
                   </span>
                 ))}
-                <a
-                  href={`mailto:${a.mail}`}
-                  className="mt-3 block text-magenta transition-colors hover:text-magenta-soft"
-                >
-                  {a.mail}
-                </a>
+                {a.mail ? (
+                  <a
+                    href={`mailto:${a.mail}`}
+                    className="mt-3 block text-magenta transition-colors hover:text-magenta-soft"
+                  >
+                    {a.mail}
+                  </a>
+                ) : (
+                  <span className="mt-3 block text-white/45">{kontaktHinweis}</span>
+                )}
               </address>
             </div>
           ))}

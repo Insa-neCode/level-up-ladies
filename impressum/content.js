@@ -4,6 +4,7 @@
 // eine Zeile { label: "Telefon", value: "...", href: "tel:..." } ergaenzen.
 
 // ---------------------------------------------------------------------------
+import { kontaktMail, kontaktHinweis, kontaktEintrag } from "../shared/kontakt.js";
 // ALTERNATIVE, sobald das Angebot ueber die Mareike Kirch Holding laeuft:
 // den Block "anbieter" unten durch diesen hier ersetzen. Fuer eine
 // eingetragene Gesellschaft sind Rechtsform, Vertretungsberechtigte,
@@ -14,7 +15,7 @@
 //     name: "Mareike Kirch Holding [Rechtsform, z. B. GmbH]",
 //     rolle: "Level Up, Ladies!",
 //     adresse: ["[Straße und Hausnummer]", "[PLZ] Dortmund", "Deutschland"],
-//     mail: "mareike.kirch@googlemail.com",
+//     mail: "[info@-Adresse eintragen]",
 //     zusatz: [
 //       "Vertreten durch: Mareike Kirch (Geschäftsführerin)",
 //       "Registergericht: Amtsgericht Dortmund",
@@ -36,24 +37,19 @@ export const impressum = {
       name: "Insa Riese",
       rolle: "Level Up, Ladies! — Bildungsbereich",
       adresse: ["Am Alten Güterbahnhof 31", "50825 Köln", "Deutschland"],
-      mail: "insariese@gmail.com",
+      mail: kontaktMail,
     },
     {
       name: "Mareike Kirch",
       rolle: "Level Up, Ladies! — Job, Business und Alltag",
       adresse: ["Am Alten Güterbahnhof 31", "50825 Köln", "Deutschland"],
-      mail: "mareike.kirch@googlemail.com",
+      mail: kontaktMail,
     },
   ],
 
   kontaktHeadline: "Kontakt",
   kontakt: [
-    { label: "E-Mail Insa", value: "insariese@gmail.com", href: "mailto:insariese@gmail.com" },
-    {
-      label: "E-Mail Mareike",
-      value: "mareike.kirch@googlemail.com",
-      href: "mailto:mareike.kirch@googlemail.com",
-    },
+    { label: "E-Mail", value: kontaktMail || kontaktHinweis, href: kontaktEintrag.href },
   ],
 
   verantwortlichHeadline: "Verantwortlich für den Inhalt",
