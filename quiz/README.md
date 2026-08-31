@@ -69,9 +69,11 @@ Die Rechnung selbst steht in **`scoring.js`** und ist von React getrennt.
 
 ## Offen
 
-- [ ] **Quellen für die drei Prozentzahlen** in `gap.stats[].source` eintragen. Solange
-      das Feld leer ist, erscheint keine Quellenzeile. Bevor die Seite beworben wird,
-      sollten die Zahlen belegt sein.
+- [x] **Quellen für die Zahlen im Abschnitt „The Gap"** — erledigt. Grundlage ist jetzt
+      Initiative D21, *Digital Gender Gap — Schwerpunkt 2026: Künstliche Intelligenz*
+      (repräsentativ, erwerbsfähige Bevölkerung 14–69 Jahre, n = 4.806, Erhebung Juli
+      2024). Die Studie liegt im Arbeitsordner als `D21-GenderAIGap-2026.pdf`.
+      Die Quellenzeile je Zahl steht in `gap.stats[].source`.
 - [ ] `leadForm` füllen, sobald Formular und Datenschutzerklärung stehen.
 
 ## Struktur

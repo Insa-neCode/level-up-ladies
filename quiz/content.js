@@ -55,14 +55,32 @@ export const gap = {
   headline: "Wir gestalten die Zukunft.",
   intro:
     "KI lernt aus den Daten, die wir ihr geben. Wenn Frauen KI bauen und nutzen, profitieren ganze Branchen. Vielfältige Teams erkennen Risiken früher, vermeiden Bias und entwickeln relevantere Lösungen. Die Technologie braucht deine Perspektive.",
+  // Zahlen aus: Initiative D21, "Digital Gender Gap — Schwerpunkt 2026:
+  // Künstliche Intelligenz". Repräsentative Befragung, erwerbsfähige
+  // Bevölkerung von 14 bis 69 Jahren, n = 4.806, Erhebung Juli 2024.
+  // Die Studie liegt im Arbeitsordner als D21-GenderAIGap-2026.pdf.
   stats: [
-    { value: "12%", label: "Der Anteil von Frauen in der weltweiten KI-Forschung.", source: "" },
-    { value: "22%", label: "Der Anteil von Frauen in professionellen KI-Rollen.", source: "" },
-    { value: "18%", label: "Der Anteil von Frauen in C-Level-Positionen bei KI-Startups.", source: "" },
+    {
+      value: "37 %",
+      label: "So viele Frauen in Deutschland nutzen KI. Bei den Männern sind es 53 Prozent.",
+      source: "Initiative D21, Digital Gender Gap 2026",
+    },
+    {
+      value: "8 PP",
+      label:
+        "So groß bleibt der Abstand, selbst wenn Alter, Bildung, Einkommen und Job gleich sind.",
+      source: "Bereinigter Gender AI Gap, Initiative D21",
+    },
+    {
+      value: "20 PP",
+      label:
+        "So weit liegen junge Frauen und Männer bei intensiver Nutzung auseinander. Bei den Jüngsten ist die Lücke am größten.",
+      source: "GenZ+, Initiative D21",
+    },
   ],
   scribble: "Keine Frage von Talent",
   closing:
-    "Das ist kein Können-Problem. Es ist ein Zugangs-Problem — und ein Zutrauens-Problem. Genau diese beiden Werte misst der Test.",
+    "Das ist kein Können-Problem. Der Abstand bleibt bestehen, auch bei gleichem Alter, gleicher Bildung, gleichem Einkommen und gleichem Job. Es ist ein Zugangs-Problem — und ein Zutrauens-Problem. Genau diese beiden Werte misst der Test.",
   ctaLabel: "Los geht es",
 };
 
@@ -445,7 +463,7 @@ export function signupHref(levelTitle) {
   // Die Adresse steht bewusst nicht am Stueck im Quelltext, damit
   // Adress-Sammler sie nicht einfach herauslesen koennen. Erst hier wird
   // sie zusammengesetzt — der Anmelde-Button funktioniert dadurch normal.
-  const empfaenger = ["insariese", "gmail.com"].join("@");
+  const empfaenger = ["riesekirch", "gmail.com"].join("@");
 
   return `mailto:${empfaenger}?subject=${subject}&body=${body}`;
 }

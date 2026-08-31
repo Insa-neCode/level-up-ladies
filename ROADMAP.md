@@ -84,14 +84,7 @@ Die verbliebenen zwei Einträge springen jetzt zu den passenden Abschnitten.
 **Was:** Die Season-Sektion zeigt Level 02–04 plus „+ 5 weitere Level". Titel und Beschreibungen der übrigen Workshops fehlen, ebenso eigene Detailseiten.
 **Wo:** `series.workshops` in beiden Content-Dateien.
 
-### 3.2 Quellen für die Zahlen im Level-Check
-**Was:** Die Sektion „The Gap" auf `/quiz/` nennt 12 %, 22 % und 18 %. Die Zahlen stammen
-aus der Kampagnengrafik, die Belegstellen fehlen noch.
-**Wo:** `quiz/content.js`, `gap.stats[].source` — solange das Feld leer ist, erscheint
-keine Quellenzeile.
-**Warum wichtig:** Sobald die Seite beworben wird, sollten die Zahlen belegbar sein.
-
-### 3.3 Weitere Termine
+### 3.2 Weitere Termine
 **Was:** Aktuell ist ein Termin hinterlegt: 12. September 2026, 10:30 Uhr.
 **Wo:** `cta.note` in beiden Content-Dateien.
 
@@ -130,3 +123,4 @@ der jeweiligen Seite: `#ueber-mich` im Bildungsbereich, `#ueber-uns` bei den Fra
 - [x] Workshop-Termin 12.09.2026, 10:30 Uhr
 - [x] „Dein Goodiebag" mit handgezeichnetem Tüten-Icon
 - [x] Leadmagnet `/quiz/` — „Der Level-Check", verlinkt aus beiden Landingpages
+- [x] Zahlen im Level-Check auf die D21-Studie „Digital Gender Gap 2026" umgestellt, mit Quellenangabe
