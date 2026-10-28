@@ -168,6 +168,7 @@ export const footer = {
   legal: [
     { label: "Impressum", to: "impressum/" },
     { label: "Datenschutz", to: "datenschutz/" },
+    { label: "KI-Transparenz", to: "ki-transparenz/" },
   ],
   outro: "Setup gemacht. Masterprompt läuft. Kreativ gestartet.",
   crossLink: { label: "Nicht aus der Schule? → Die Seite für alle Frauen", to: "frauen/" },

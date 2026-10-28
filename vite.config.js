@@ -24,6 +24,7 @@ export default defineConfig({
         quiz: resolve(root, 'quiz/index.html'),
         impressum: resolve(root, 'impressum/index.html'),
         datenschutz: resolve(root, 'datenschutz/index.html'),
+        kiTransparenz: resolve(root, 'ki-transparenz/index.html'),
       },
     },
   },

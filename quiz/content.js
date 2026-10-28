@@ -392,6 +392,7 @@ export const footer = {
   legal: [
     { label: "Impressum", to: "impressum/" },
     { label: "Datenschutz", to: "datenschutz/" },
+    { label: "KI-Transparenz", to: "ki-transparenz/" },
   ],
   copyright: "© 2026 Level Up Ladies | Von Frauen, für Frauen",
   madeWith: "Made with ❤️ and Claude",
