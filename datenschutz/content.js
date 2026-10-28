@@ -14,9 +14,10 @@ export const datenschutz = {
 
   verantwortlichHeadline: "Verantwortliche",
   verantwortlich: [
-    "Insa Riese und Mareike Kirch",
-    "Am Alten Güterbahnhof 31",
-    "50825 Köln",
+    "Mareike Kirch Holding GmbH",
+    "Robert-Stolz-Str. 30",
+    "44139 Dortmund",
+    "Geschäftsführerin: Mareike Kirch",
     kontaktMail || kontaktHinweis,
   ],
 
@@ -38,8 +39,16 @@ export const datenschutz = {
       text: "Für Workshop-Anmeldungen setzen wir Google Forms ein, einen Dienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Wenn du dich anmeldest, verarbeiten wir die von dir angegebenen Daten — in der Regel Name, E-Mail-Adresse und freiwillige Angaben zu deinem Arbeitsumfeld — ausschließlich zur Organisation und Durchführung des Workshops. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit formlos per E-Mail widerrufen kannst; die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung bleibt davon unberührt. Wir löschen die Anmeldedaten spätestens sechs Monate nach dem Workshop. Google bindet in das Formular zusätzlich reCAPTCHA zum Schutz vor automatisierten Eingaben ein; dabei werden technische Daten wie IP-Adresse und Browserangaben an Google übermittelt. Eine Übermittlung in Drittländer kann bei der Nutzung von Google-Diensten nicht ausgeschlossen werden.",
     },
     {
+      titel: "Adventskalender: Adventsmails, Newsletter und Warteliste",
+      text: "Im Adventskalender kannst du dich ab Tür 6 mit deiner E-Mail-Adresse eintragen. Wir verarbeiten dann ausschließlich deine E-Mail-Adresse: für eine kurze Erinnerung an das neue Türchen jeden Morgen vom 7. bis 24. Dezember 2026, im Kalender „Job, Business und Alltag“ zusätzlich für den Newsletter von Mareike Kirch mit KI-Hacks und Informationen zum Workshop, im Kalender für Lehrkräfte zusätzlich für die Warteliste von Insa Riese, über die du erfährst, wann die Workshop-Season startet. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit mit Wirkung für die Zukunft widerrufen kannst – über den Abmeldelink in jeder Mail oder per E-Mail an uns. Wir nutzen das Double-Opt-in-Verfahren: Nach der Eintragung bestätigst du in einer Mail, dass die Adresse dir gehört. Den Zeitpunkt von Eintragung und Bestätigung speichern wir, um die Einwilligung nachweisen zu können (Art. 6 Abs. 1 lit. f DSGVO). Für den Versand nutzen wir Brevo, Anbieter ist [Anbieterangaben laut Auftragsverarbeitungsvertrag mit Brevo]. Brevo verarbeitet deine Daten in unserem Auftrag auf Grundlage eines Auftragsverarbeitungsvertrags. Wir werten nicht aus, ob du unsere Mails öffnest oder Links darin anklickst. Deine Adresse speichern wir, bis du dich abmeldest; danach löschen wir sie, sie kann aber auf einer Sperrliste bleiben, damit du keine Mails mehr bekommst. Die Eintragung ist freiwillig; die Türen 1 bis 5 öffnen sich auch ohne.",
+    },
+    {
+      titel: "Adventskalender: Speicherung im Browser",
+      text: "Damit sich der Adventskalender merkt, dass du dich eingetragen hast, und die Türen für dich offen bleiben, speichert er einen kurzen Vermerk im lokalen Speicher deines Browsers (localStorage). Der Vermerk enthält keine personenbezogenen Daten wie deine E-Mail-Adresse und wird nicht an uns übertragen. Die Speicherung ist für die von dir gewünschte Funktion unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Du kannst den Vermerk jederzeit über die Einstellungen deines Browsers löschen. Die Prompts im Kalender kopierst du per Button in die Zwischenablage deines Geräts; dabei werden keine Daten übertragen. Links zu KI-Diensten wie Claude, ChatGPT oder Gemini sind gewöhnliche Links – erst wenn du einen öffnest, gelten dort die Datenschutzbestimmungen des jeweiligen Anbieters.",
+    },
+    {
       titel: "Keine Cookies, kein Tracking",
-      text: "Diese Website speichert keine Cookies auf deinem Gerät, bindet keine Analyse- oder Werbedienste ein und erstellt keine Profile. Es gibt deshalb auch kein Einwilligungsbanner.",
+      text: "Diese Website speichert keine Cookies auf deinem Gerät, bindet keine Analyse- oder Werbedienste ein und erstellt keine Profile. Es gibt deshalb auch kein Einwilligungsbanner. Einzige Ausnahme ist der oben beschriebene Vermerk des Adventskalenders im lokalen Speicher deines Browsers.",
     },
     {
       titel: "Externe Links",
@@ -47,13 +56,17 @@ export const datenschutz = {
     },
     {
       titel: "Deine Rechte",
-      text: "Du hast das Recht auf Auskunft über die zu dir gespeicherten Daten (Art. 15 DSGVO), auf Berichtigung (Art. 16), auf Löschung (Art. 17), auf Einschränkung der Verarbeitung (Art. 18), auf Datenübertragbarkeit (Art. 20) sowie auf Widerspruch gegen Verarbeitungen, die auf berechtigtem Interesse beruhen (Art. 21). Wende dich dafür formlos an die oben genannten Adressen.",
+      text: "Du hast das Recht auf Auskunft über die zu dir gespeicherten Daten (Art. 15 DSGVO), auf Berichtigung (Art. 16), auf Löschung (Art. 17), auf Einschränkung der Verarbeitung (Art. 18), auf Datenübertragbarkeit (Art. 20) sowie auf Widerspruch gegen Verarbeitungen, die auf berechtigtem Interesse beruhen (Art. 21). Wenn eine Verarbeitung auf deiner Einwilligung beruht, kannst du diese jederzeit mit Wirkung für die Zukunft widerrufen; die Rechtmäßigkeit der bisherigen Verarbeitung bleibt davon unberührt. Bei Direktwerbung besteht ein Widerspruchsrecht ohne Angabe von Gründen. Wende dich dafür formlos an die oben genannten Adressen.",
     },
     {
       titel: "Beschwerderecht",
       text: "Wenn du der Ansicht bist, dass wir deine Daten nicht rechtmäßig verarbeiten, kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren. Für uns zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2–4, 40213 Düsseldorf.",
     },
+    {
+      titel: "Automatisierte Entscheidungen",
+      text: "Im Rahmen der hier beschriebenen Verarbeitung treffen wir keine ausschließlich automatisierten Entscheidungen mit rechtlicher oder ähnlich erheblicher Wirkung für dich.",
+    },
   ],
 
-  stand: "Stand: August 2026",
+  stand: "Stand: Oktober 2026",
 };

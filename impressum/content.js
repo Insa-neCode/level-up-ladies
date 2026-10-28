@@ -5,25 +5,10 @@
 
 // ---------------------------------------------------------------------------
 import { kontaktMail, kontaktHinweis, kontaktEintrag } from "../shared/kontakt.js";
-// ALTERNATIVE, sobald das Angebot ueber die Mareike Kirch Holding laeuft:
-// den Block "anbieter" unten durch diesen hier ersetzen. Fuer eine
-// eingetragene Gesellschaft sind Rechtsform, Vertretungsberechtigte,
-// Registergericht und Registernummer Pflichtangaben (§ 5 DDG).
-//
-// anbieter: [
-//   {
-//     name: "Mareike Kirch Holding [Rechtsform, z. B. GmbH]",
-//     rolle: "Level Up, Ladies!",
-//     adresse: ["[Straße und Hausnummer]", "[PLZ] Dortmund", "Deutschland"],
-//     mail: "[info@-Adresse eintragen]",
-//     zusatz: [
-//       "Vertreten durch: Mareike Kirch (Geschäftsführerin)",
-//       "Registergericht: Amtsgericht Dortmund",
-//       "Registernummer: HRB [Nummer]",
-//       "USt-IdNr.: [falls vorhanden]",
-//     ],
-//   },
-// ],
+// Anbieterin ist die Mareike Kirch Holding GmbH, Level Up, Ladies! ist ein
+// Produkt der Holding (Entscheidung 28.10.2026). Angaben wie im Impressum von
+// design-your-career-mareike.netlify.app (Stand 12.10.2026). Keine
+// Wohnadressen von Insa und Mareike verwenden.
 // ---------------------------------------------------------------------------
 
 export const impressum = {
@@ -31,35 +16,33 @@ export const impressum = {
   headline: "Impressum",
   intro: "Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz).",
 
-  anbieterHeadline: "Diensteanbieterinnen",
+  anbieterHeadline: "Anbieterin",
   anbieter: [
     {
-      name: "Insa Riese",
-      rolle: "Level Up, Ladies! — Bildungsbereich",
-      adresse: ["Am Alten Güterbahnhof 31", "50825 Köln", "Deutschland"],
-      mail: kontaktMail,
-    },
-    {
-      name: "Mareike Kirch",
-      rolle: "Level Up, Ladies! — Job, Business und Alltag",
-      adresse: ["Am Alten Güterbahnhof 31", "50825 Köln", "Deutschland"],
+      name: "Mareike Kirch Holding GmbH",
+      rolle: "Level Up, Ladies! ist ein Angebot der Mareike Kirch Holding GmbH",
+      adresse: ["Robert-Stolz-Str. 30", "44139 Dortmund", "Deutschland"],
       mail: kontaktMail,
     },
   ],
 
-  kontaktHeadline: "Kontakt",
+  kontaktHeadline: "Kontakt und Registerangaben",
   kontakt: [
+    { label: "Vertreten durch", value: "Mareike Kirch (Geschäftsführerin)" },
     { label: "E-Mail", value: kontaktMail || kontaktHinweis, href: kontaktEintrag.href },
+    { label: "Registergericht", value: "Amtsgericht Dortmund" },
+    { label: "Registernummer", value: "HRB 32511" },
+    { label: "USt-IdNr.", value: "DE338410376 (gemäß § 27a UStG)" },
   ],
 
   verantwortlichHeadline: "Verantwortlich für den Inhalt",
   verantwortlichText:
-    "Verantwortlich nach § 18 Abs. 2 MStV: Insa Riese, Anschrift wie oben. Für die Inhalte der Seite /frauen/: Mareike Kirch, Anschrift wie oben.",
+    "Verantwortlich nach § 18 Abs. 2 MStV, jeweils erreichbar unter der Anschrift der Mareike Kirch Holding GmbH: Insa Riese für die Inhalte des Bildungsbereichs (Startseite und Adventskalender für Lehrkräfte), Mareike Kirch für die Inhalte zu Job, Business und Alltag (Seite /frauen/, Level-Check und Adventskalender „Job, Business und Alltag“).",
 
   abschnitte: [
     {
       titel: "Haftung für Inhalte",
-      text: "Als Diensteanbieterinnen sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieterinnen jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen entfernen wir diese Inhalte umgehend.",
+      text: "Als Diensteanbieterin sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieterin jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen entfernen wir diese Inhalte umgehend.",
     },
     {
       titel: "Haftung für Links",
@@ -67,7 +50,7 @@ export const impressum = {
     },
     {
       titel: "Urheberrecht",
-      text: "Die durch die Seitenbetreiberinnen erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung der jeweiligen Autorin. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.",
+      text: "Die durch Insa Riese und Mareike Kirch erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung der jeweiligen Autorin. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.",
     },
     {
       titel: "Bildnachweise",
@@ -79,6 +62,6 @@ export const impressum = {
     },
   ],
 
-  stand: "Stand: August 2026",
+  stand: "Stand: Oktober 2026",
   zurueck: "Zurück zur Startseite",
 };
