@@ -35,7 +35,7 @@ export const hero = {
     "Wir schließen den digitalen Gap.",
     "Gemeinsam. Mit Claude. Ohne Angst.",
   ],
-  byline: "Insa Riese & Mareike · Wir schließen den digitalen Gap",
+  byline: "Insa & Mareike · Wir schließen den digitalen Gap",
   scribbles: {
     topRight: "Future is female",
     midRight: "Hack the system",

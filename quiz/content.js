@@ -38,7 +38,7 @@ export const hero = {
     "Zehn Fragen. Zwei Werte: was du kannst und was du dir zutraust.",
     "Am Ende weißt du, welches Level du hast — und was dein nächster Schritt ist.",
   ],
-  byline: "Von Insa Riese & Mareike Kirch · Level Up, Ladies!",
+  byline: "Von Insa & Mareike · Level Up, Ladies!",
   scribbles: {
     topRight: "Ehrlich antworten!",
     bottomLeft: "Knowledge = Power",

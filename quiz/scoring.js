@@ -91,7 +91,7 @@ export function alsText({ praxis, mut, level, gapFall }) {
     "-----------------------------------",
     "Level Up, Ladies! — KI-Power fuer Frauen in Job, Business und Alltag",
     "Workshop 'Claude kennt dich' am 12. September 2026, 10:30 Uhr",
-    "Insa Riese & Mareike Kirch",
+    "Insa & Mareike",
   ];
 
   return zeilen.join("\r\n");
