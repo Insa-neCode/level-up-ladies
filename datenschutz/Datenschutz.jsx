@@ -49,6 +49,16 @@ export default function Datenschutz() {
               {a.titel}
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-dim">{a.text}</p>
+            {a.liste && (
+              <ul className="mt-4 space-y-2 text-[15px] leading-relaxed text-dim">
+                {a.liste.map((punkt) => (
+                  <li key={punkt} className="flex gap-3">
+                    <span aria-hidden="true" className="mt-[0.6em] h-1.5 w-1.5 shrink-0 rounded-full bg-magenta" />
+                    {punkt}
+                  </li>
+                ))}
+              </ul>
+            )}
           </section>
         ))}
 
